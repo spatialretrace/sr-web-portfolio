@@ -27,5 +27,6 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SPATIAL_RETRACE }}'
+          entryPoint: ./my_landing_page
           channelId: live
           projectId: spatial-retrace
