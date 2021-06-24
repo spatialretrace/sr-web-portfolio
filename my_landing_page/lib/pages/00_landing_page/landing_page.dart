@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:my_landing_page/pages/00_landing_page/hi_intro.dart';
+import 'package:my_landing_page/pages/00_landing_page/hi_intro.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -19,33 +19,44 @@ class LandingPage extends StatelessWidget {
             height: height,
             decoration: BoxDecoration(
               image: DecorationImage(
+                alignment: Alignment.centerLeft,
                 image: AssetImage("assets/BG_Landing.jpg"),
-                fit: BoxFit.cover,
+                fit: BoxFit.fitHeight,
               ),
             ),
           ),
-          // Row(
-          //   mainAxisSize: MainAxisSize.max,
-          //   mainAxisAlignment: MainAxisAlignment.end,
-          //   children: [
-          //     Expanded(
-          //       flex: 4,
-          //       child: HiIntro(),
-          //     ),
-          //     Expanded(
-          //       flex: 5,
-          //       child: GestureDetector(
-          //         child: CustomPaint(
-          //           size: Size(200, height),
-          //           painter: SliderPainter(),
-          //         ),
-          //         onTap: () {
-          //           debugPrint("GO TO WORK PAGE!!");
-          //         },
-          //       ),
-          //     ),
-          //   ],
-          // ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                width: 0.4 * width,
+                height: height,
+                child: Text(
+                  "HI!!",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Futura',
+                    fontSize: 100,
+                  ),
+                ),
+                // HiIntro(),
+              ),
+              Container(
+                width: 0.4 * width,
+                height: height,
+                child: GestureDetector(
+                  child: CustomPaint(
+                    size: Size(200, height),
+                    painter: SliderPainter(),
+                  ),
+                  onTap: () {
+                    debugPrint("GO TO WORK PAGE!!");
+                  },
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
