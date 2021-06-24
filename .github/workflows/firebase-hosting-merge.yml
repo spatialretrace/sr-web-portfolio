@@ -11,8 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - working-directory: ./my_landing_page
-      - run: sudo snap install flutter --classic && flutter channel beta && flutter config --enable-web && flutter build web
+      - name: Install Flutter Classic
+        working-directory: ./my_landing_page
+        run: sudo snap install flutter --classic
+      - name: Switch to Flutter Beta Channel
+        working-directory: ./my_landing_page
+        run: flutter channel beta
+      - name: Enable Web in Flutter Config
+        working-directory: ./my_landing_page
+        run: flutter config --enable-web
+      - name: Build Flutter Web App
+        working-directory: ./my_landing_page
+        run: flutter build web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
