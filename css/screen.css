@@ -1,0 +1,166 @@
+html{
+  background-color: #B44B4A;
+}
+
+body{
+  font-family: 'Avenir', sans-serif;
+  font-size: 87%;
+}
+
+.container{
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+header{
+padding-top: 20px;
+color: black;
+}
+
+header h1{
+  margin: 0;
+  font-size: 165%;
+}
+
+header p{
+  margin: 0;
+}
+
+.header-area{
+  padding: 20px 0px;
+}
+
+.nav-area{
+  float: left;
+}
+
+.logo-area{
+  float: right;
+  text-align: right;
+}
+
+/* SITE NAVIGATION */
+.site-nav{
+  border: 2px solid black;
+}
+.site-nav ul{
+  padding: 0;
+}
+.site-nav li{
+  list-style: none;
+  float: left;
+  margin-right: 5px;
+}
+.site-nav a{
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.site-nav a:hover{
+  color: #B44B4A;
+}
+/* END OF SITE NAVIGATION */
+
+/* START OF FEATURED POSTS SECTION*/
+.featured-posts h1{
+  font-size: 145%;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.featured-post-list{
+  padding: 0;
+  margin: 0;
+  display:flex;
+}
+.featured-post-list li{
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+}
+
+.blogpost-featured{
+  max-width: 360px;
+  max-height: 400px;
+}
+
+.blogpost-featured .image-box{
+  width: 350px;
+  height: 200px;
+  background-color: #999;
+  margin: 20px 0px 10px 0px;
+  text-align: center;
+}
+.blogpost-featured img{
+  width: 350px;
+  height: 200px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07),
+              0 2px 4px rgba(0,0,0,0.07),
+              0 4px 8px rgba(0,0,0,0.07),
+              0 8px 16px rgba(0,0,0,0.07),
+              0 16px 32px rgba(0,0,0,0.07),
+              0 32px 64px rgba(0,0,0,0.07);
+}
+.blogpost-featured .details{
+  padding-bottom: 20px;
+}
+.blogpost-featured h1{
+  padding: 0;
+  margin: 0;
+  font-size: 120%;
+}
+.blogpost-featured .intro{
+  padding: 0;
+  margin: 0;
+}
+.blogpost-featured a{
+  color: #B44B4A;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blogpost-featured .date{
+  font-size: 80%;
+  padding: 0;
+  margin: 0;
+}
+/* END OF FEATURED POSTS SECTION*/
+
+/* START OF BLOG BANNER */
+.banner-featured .image-box{
+  margin: 0;
+  padding: 0;
+  background-color: #999;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+/* END OF BLOG BANNER */
+
+footer{
+  text-align: center;
+  font-size: 85%;
+  color: #999;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.group:before,
+.group:after{
+  content: "";
+  display: table;
+}
+
+.group:after{
+  clear: both;
+}
+
+.group{
+  zoom: 1;
+}
