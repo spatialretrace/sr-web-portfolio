@@ -20,7 +20,7 @@ class LandingPage extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 alignment: Alignment.centerLeft,
-                image: AssetImage("assets/BG_Landing.jpg"),
+                image: AssetImage("assets/BG_Landing.PNG"),
                 fit: BoxFit.fitHeight,
               ),
             ),
@@ -30,20 +30,12 @@ class LandingPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
-                width: 0.4 * width,
+                width: 0.45 * width,
                 height: height,
-                child: Text(
-                  "HI!!",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Futura',
-                    fontSize: 100,
-                  ),
-                ),
-                // HiIntro(),
+                child: HiIntro(),
               ),
               Container(
-                width: 0.4 * width,
+                width: 0.45 * width,
                 height: height,
                 child: GestureDetector(
                   child: CustomPaint(

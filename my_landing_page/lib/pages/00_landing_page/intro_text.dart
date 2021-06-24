@@ -24,7 +24,7 @@ class IntroText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 150),
+      // padding: EdgeInsets.only(left: 150),
       alignment: Alignment.bottomLeft,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

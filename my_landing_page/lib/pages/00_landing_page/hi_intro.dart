@@ -11,14 +11,15 @@ class HiIntro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
-    // final double height = MediaQuery.of(context).size.height;
+    final double height = MediaQuery.of(context).size.height;
     return Container(
       child: Column(
         children: [
-          Expanded(
-            flex: 1,
+          Container(
+            width: width,
+            height: 0.16 * height,
             child: Container(
-              padding: EdgeInsets.only(left: 150, top: 100),
+              padding: EdgeInsets.only(top: 100),
               child: WebNav(
                 navAlignment: MainAxisAlignment.start,
                 navTextColor: Colors.white,
@@ -27,8 +28,9 @@ class HiIntro extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
-            flex: 3,
+          Container(
+            width: width,
+            height: 0.5 * height,
             child: IntroText(
                 fontFam: 'Futura',
                 textColor1: Colors.black,
@@ -40,23 +42,25 @@ class HiIntro extends StatelessWidget {
                 fontWeight: FontWeight.w100,
                 letterSpace: 2),
           ),
-          Expanded(
-            flex: 2,
+          Container(
+            width: width,
+            height: 0.3 * height,
             child: SocialMedia(
               buttonColor: Colors.black,
               iconColor: Colors.amber,
               buttonRowAxis: MainAxisAlignment.start,
               buttonRowAlignment: Alignment.topLeft,
-              buttonRowPadding: EdgeInsets.only(left: 150, top: 50),
+              buttonRowPadding: EdgeInsets.only(top: 50),
             ),
           ),
           Container(
             alignment: Alignment.bottomLeft,
-            padding: EdgeInsets.all(10),
+            // padding: EdgeInsets.all(10),
             child: Text('© 2021, Built with Flutter',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 12,
+                  fontWeight: FontWeight.bold,
                 )),
           )
         ],
