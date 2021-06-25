@@ -12,15 +12,11 @@ class PortfolioSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        Container(
-          width: 1280,
-          // padding: EdgeInsets.all(20),
-          child: PortfolioGallery(),
-        ),
-      ],
+    return Container(
+      width: 1280,
+      height: 1280,
+      // padding: EdgeInsets.all(20),
+      child: PortfolioGallery(),
     );
   }
 }

@@ -60,26 +60,29 @@ class _PortfolioProjectState extends State<PortfolioProject> {
 class PortfolioGallery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      shrinkWrap: true,
-      crossAxisCount: 3,
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
-      children: [
-        for (var project in projects)
-          GestureDetector(
+    return GridView.builder(
+        // shrinkWrap: true,
+        padding: EdgeInsets.only(top: 10),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
+        itemCount: projects.length,
+        itemBuilder: (context, index) {
+          return GestureDetector(
             onTap: () {
               debugPrint(
-                  'ROUTING TO PAGE OF PROJECT ${project.projectName}!!!');
-              Navigator.pushNamed(context, "/work${project.projectRoute}");
+                  'ROUTING TO PAGE OF PROJECT ${projects[index].projectName}!!!');
+              Navigator.pushNamed(
+                  context, "/work${projects[index].projectRoute}");
             },
             child: PortfolioProject(
-              projectName: project.projectName,
-              previewImage: project.previewImage,
-              hoverImage: project.hoverImage,
+              projectName: projects[index].projectName,
+              previewImage: projects[index].previewImage,
+              hoverImage: projects[index].hoverImage,
             ),
-          ),
-      ],
-    );
+          );
+        });
   }
 }

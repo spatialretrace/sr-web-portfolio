@@ -19,7 +19,7 @@ class WorkPage extends StatelessWidget {
             WebBG(
               homeBGback: homeBGback,
               homeBGfront: homeBGfront,
-              pageHeight: 2160, //SUBJECT TO CHANGE BASED ON GRID VIEW SIZES
+              pageHeight: 1920, //SUBJECT TO CHANGE BASED ON GRID VIEW SIZES
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
