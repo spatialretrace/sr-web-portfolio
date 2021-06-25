@@ -11,6 +11,7 @@ class WorkPage extends StatelessWidget {
     final Color homeBGback = Colors.amber;
     final Color homeBGfront = Colors.black;
     final double width = MediaQuery.of(context).size.width;
+    // final double height = MediaQuery.of(context).size.height;
     return Material(
       child: SingleChildScrollView(
         child: Stack(
@@ -18,25 +19,23 @@ class WorkPage extends StatelessWidget {
             WebBG(
               homeBGback: homeBGback,
               homeBGfront: homeBGfront,
-              pageHeight: width * 1.2635 + 620,
+              pageHeight: 2160, //SUBJECT TO CHANGE BASED ON GRID VIEW SIZES
             ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  //HEADER SECTION
-                  HeaderSection(),
-                  //PORTFOLIO PROJECT NAVIGATOR
-                  NavPortfolio(width: width),
-                  SizedBox(
-                    height: 50,
-                  ),
-                  //PORTFOLIO GALLERY SECTION
-                  PortfolioSection(width: width),
-                  //FOOTER SECTION
-                  FooterSection(),
-                ],
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                //HEADER SECTION
+                HeaderSection(),
+                //PORTFOLIO PROJECT NAVIGATOR
+                NavPortfolio(width: width),
+                SizedBox(
+                  height: 50,
+                ),
+                //PORTFOLIO GALLERY SECTION
+                PortfolioSection(width: width),
+                //FOOTER SECTION
+                FooterSection(),
+              ],
             ),
           ],
         ),

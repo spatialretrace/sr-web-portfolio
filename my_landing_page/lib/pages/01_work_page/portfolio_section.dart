@@ -15,7 +15,11 @@ class PortfolioSection extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
-        PortfolioGallery(),
+        Container(
+          width: 1280,
+          // padding: EdgeInsets.all(20),
+          child: PortfolioGallery(),
+        ),
       ],
     );
   }
