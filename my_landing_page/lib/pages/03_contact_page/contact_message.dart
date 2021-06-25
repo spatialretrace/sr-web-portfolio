@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 class ContactMessage extends StatelessWidget {
   const ContactMessage({
     Key key,
+    @required this.widgetHeight,
   }) : super(key: key);
 
+  final double widgetHeight;
   @override
   Widget build(BuildContext context) {
     final double columnWidth = 60;
     // final double width = MediaQuery.of(context).size.width;
-    return Expanded(
-      flex: 3,
+    return Container(
+      height: widgetHeight,
       child: Container(
         child: Stack(
           children: [
@@ -19,10 +21,9 @@ class ContactMessage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    flex: 3,
+                  Container(
+                    height: 130,
                     child: Container(
-                      // height: 80,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           alignment: Alignment.topLeft,
@@ -35,8 +36,8 @@ class ContactMessage extends StatelessWidget {
                   SizedBox(
                     height: 40,
                   ),
-                  Expanded(
-                    flex: 3,
+                  Container(
+                    height: 130,
                     child: Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
@@ -68,8 +69,8 @@ class ContactMessage extends StatelessWidget {
                   padding: EdgeInsets.only(
                     top: 20,
                     bottom: 20,
-                    right: columnWidth,
-                    left: columnWidth,
+                    right: columnWidth + 20,
+                    left: columnWidth + 20,
                   ),
                   child: Text.rich(
                     TextSpan(
@@ -77,7 +78,6 @@ class ContactMessage extends StatelessWidget {
                         TextSpan(
                           text:
                               'I’m always looking for amazing ideas and wonderful people to work with. Go ahead and drop me a message and I should get back to you within 2-3 business days.',
-                          // 'You can also check out my ',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
@@ -85,15 +85,6 @@ class ContactMessage extends StatelessWidget {
                             height: 1.5,
                           ),
                         ),
-                        // TextSpan(
-                        //   text: 'FAQ.',
-                        //   style: TextStyle(
-                        //     color: Colors.white,
-                        //     fontSize: 16,
-                        //     fontFamily: 'Futura',
-                        //     fontWeight: FontWeight.bold,
-                        //   ),
-                        // ),
                       ],
                     ),
                   ),

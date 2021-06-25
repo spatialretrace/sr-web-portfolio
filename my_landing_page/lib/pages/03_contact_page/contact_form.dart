@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 class ContactForm extends StatelessWidget {
   const ContactForm({
     Key key,
+    @required this.widgetHeight,
   }) : super(key: key);
 
+  final double widgetHeight;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 4,
+    return Container(
+      height: widgetHeight,
       child: Container(
         child: Stack(
           children: [

@@ -11,7 +11,7 @@ class FooterSection extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 60,
+          height: 20,
         ),
         Text(
           'ALL DESIGNS \u00a9 FIRDOUS NIZAR',

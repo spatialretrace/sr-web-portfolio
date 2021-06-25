@@ -20,63 +20,62 @@ class ContactPage extends StatelessWidget {
             WebBG(
               homeBGback: homeBGback,
               homeBGfront: homeBGfront,
-              pageHeight: height * 1.5,
+              pageHeight: height * 1.3,
             ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(
-                      // top: 50,
-                      right: 50,
-                      // bottom: 50,
-                    ),
-                    height: height * 1.5,
-                    child: Row(
-                      children: [
-                        //WEIRD CURVE AND FACE SECTION
-                        CurveNFace(
-                          widgetWidth: 0.28 * width,
-                        ),
-                        //ABOUT CONTENT SECTION
-                        Container(
-                          width: 0.65 * width,
-                          child: Container(
-                            // color: Colors.amber,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                //NAV SECTION
-                                WebNav(
-                                  navAlignment: MainAxisAlignment.center,
-                                  navTextColor: Colors.white,
-                                  navTextElevation: 3.0,
-                                  navSpacing: 80,
-                                ),
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                //CONTACT MESSAGE SECTION
-                                ContactMessage(),
-                                //CONTACT FORM SECTION
-                                ContactForm(),
-                                //FOOTER SECTION
-                                FooterSection(),
-                                SizedBox(
-                                  height: 50,
-                                ),
-                              ],
-                            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.only(
+                    // top: 50,
+                    right: 50,
+                    // bottom: 50,
+                  ),
+                  height: height * 1.3,
+                  child: Row(
+                    children: [
+                      //WEIRD CURVE AND FACE SECTION
+                      CurveNFace(
+                        widgetWidth: 0.28 * width,
+                      ),
+                      //ABOUT CONTENT SECTION
+                      Container(
+                        width: 0.65 * width,
+                        child: Container(
+                          // color: Colors.amber,
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 50,
+                              ),
+                              //NAV SECTION
+                              WebNav(
+                                navAlignment: MainAxisAlignment.center,
+                                navTextColor: Colors.white,
+                                navTextElevation: 3.0,
+                                navSpacing: 80,
+                              ),
+                              SizedBox(
+                                height: 50,
+                              ),
+                              //CONTACT MESSAGE SECTION
+                              ContactMessage(
+                                widgetHeight: 300,
+                              ),
+                              //CONTACT FORM SECTION
+                              ContactForm(
+                                widgetHeight: 420,
+                              ),
+                              //FOOTER SECTION
+                              FooterSection(),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             Positioned(
               bottom: 0,
