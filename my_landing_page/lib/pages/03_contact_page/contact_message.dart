@@ -27,7 +27,7 @@ class ContactMessage extends StatelessWidget {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           alignment: Alignment.topLeft,
-                          image: AssetImage('Left_SRArrowButton.png'),
+                          image: AssetImage('assets/Left_SRArrowButton.png'),
                           fit: BoxFit.fitHeight,
                         ),
                       ),
@@ -42,7 +42,7 @@ class ContactMessage extends StatelessWidget {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           alignment: Alignment.bottomRight,
-                          image: AssetImage('Right_SRArrowButton.png'),
+                          image: AssetImage('assets/Right_SRArrowButton.png'),
                           fit: BoxFit.fitHeight,
                         ),
                       ),
@@ -109,7 +109,7 @@ class ContactMessage extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       alignment: Alignment.bottomRight,
-                      image: AssetImage('FN_Sign.png'),
+                      image: AssetImage('assets/FN_Sign.png'),
                     ),
                   ),
                 )
