@@ -7,8 +7,10 @@ import 'package:my_landing_page/widgets/right_SR_button.dart';
 class Reviews extends StatefulWidget {
   const Reviews({
     Key key,
+    @required this.widgetHeight,
   }) : super(key: key);
 
+  final double widgetHeight;
   @override
   _ReviewsState createState() => _ReviewsState();
 }
@@ -17,14 +19,15 @@ class _ReviewsState extends State<Reviews> {
   @override
   Widget build(BuildContext context) {
     Color hoverButtonColor = Color(0xffFFFFFF).withOpacity(1.0);
-    return Expanded(
-      flex: 2,
+    final double width = MediaQuery.of(context).size.width;
+    return Container(
+      height: widget.widgetHeight,
       child: Container(
         child: Row(
           children: [
             //REVIEW LEFT ARROW BUTTON
-            Expanded(
-              flex: 1,
+            Container(
+              width: 0.08 * width,
               child: Container(
                 // margin: EdgeInsets.only(right: 10),
                 // color: Colors.white,
@@ -40,10 +43,12 @@ class _ReviewsState extends State<Reviews> {
               ),
             ),
             //REVIEW LIST SECTION
-            ReviewList(),
+            ReviewList(
+              widgetWidth: 0.48 * width,
+            ),
             //REVIEW RIGHT ARROW BUTTON
-            Expanded(
-              flex: 1,
+            Container(
+              width: 0.08 * width,
               child: Container(
                 // color: Colors.white,
                 child: GestureDetector(

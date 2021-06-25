@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_landing_page/pages/02_about_page/curve_n_face.dart';
+import 'package:my_landing_page/widgets/curve_n_face.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
 import 'package:my_landing_page/pages/02_about_page/intro_video_bio.dart';
 import 'package:my_landing_page/pages/02_about_page/reviews.dart';
@@ -11,7 +11,7 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final Color homeBGback = Colors.amber;
     final Color homeBGfront = Colors.black;
-    // final double width = MediaQuery.of(context).size.width;
+    final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     return Material(
       child: SingleChildScrollView(
@@ -20,65 +20,62 @@ class AboutPage extends StatelessWidget {
             WebBG(
               homeBGback: homeBGback,
               homeBGfront: homeBGfront,
-              pageHeight: height * 1.5,
+              pageHeight: height * 1.28,
             ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(
-                      // top: 50,
-                      right: 50,
-                      // bottom: 50,
-                    ),
-                    height: height * 1.5,
-                    child: Row(
-                      children: [
-                        //WEIRD CURVE AND FACE SECTION
-                        CurveNFace(
-                          widgetFlex: 2,
-                        ),
-                        //ABOUT CONTENT SECTION
-                        Expanded(
-                          flex: 5,
-                          child: Container(
-                            // color: Colors.amber,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                //NAV SECTION
-                                WebNav(
-                                  navAlignment: MainAxisAlignment.center,
-                                  navTextColor: Colors.white,
-                                  navTextElevation: 3.0,
-                                  navSpacing: 80,
-                                ),
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                //INTRO VIDEO & BIO SECTION
-                                IntroVideoBio(
-                                  widgetFlex: 5,
-                                ),
-                                //REVIEWS SECTION
-                                Reviews(),
-                                //FOOTER SECTION
-                                FooterSection(),
-                                SizedBox(
-                                  height: 50,
-                                ),
-                              ],
-                            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.only(
+                    // top: 50,
+                    right: 50,
+                    // bottom: 50,
+                  ),
+                  height: height * 1.28,
+                  child: Row(
+                    children: [
+                      //WEIRD CURVE AND FACE SECTION
+                      CurveNFace(
+                        widgetWidth: 0.28 * width,
+                      ),
+                      //ABOUT CONTENT SECTION
+                      Container(
+                        width: 0.65 * width,
+                        child: Container(
+                          // color: Colors.amber,
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 50,
+                              ),
+                              //NAV SECTION
+                              WebNav(
+                                navAlignment: MainAxisAlignment.center,
+                                navTextColor: Colors.white,
+                                navTextElevation: 3.0,
+                                navSpacing: 80,
+                              ),
+                              SizedBox(
+                                height: 50,
+                              ),
+                              //INTRO VIDEO & BIO SECTION
+                              IntroVideoBio(
+                                widgetHeight: 0.6 * height,
+                              ),
+                              //REVIEWS SECTION
+                              Reviews(
+                                widgetHeight: 0.25 * height,
+                              ),
+                              //FOOTER SECTION
+                              FooterSection(),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             Positioned(
               bottom: 0,

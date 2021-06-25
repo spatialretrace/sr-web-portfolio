@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class CurveNFace extends StatelessWidget {
   const CurveNFace({
     Key key,
-    @required this.widgetFlex,
+    @required this.widgetWidth,
   }) : super(key: key);
-  final int widgetFlex;
+  final double widgetWidth;
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
-    return Expanded(
-      flex: widgetFlex,
+    return Container(
+      width: widgetWidth,
       child: Container(
         margin: EdgeInsets.only(right: 20),
         // padding: EdgeInsets.only(right: 50),

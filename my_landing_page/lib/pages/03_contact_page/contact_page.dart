@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/pages/03_contact_page/contact_form.dart';
 import 'package:my_landing_page/pages/03_contact_page/contact_message.dart';
-import 'package:my_landing_page/pages/03_contact_page/curve_n_face.dart';
+import 'package:my_landing_page/widgets/curve_n_face.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
 import 'package:my_landing_page/widgets/web_BG.dart';
 import 'package:my_landing_page/widgets/web_nav.dart';
@@ -11,6 +11,7 @@ class ContactPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final Color homeBGback = Colors.amber;
     final Color homeBGfront = Colors.black;
+    final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     return Material(
       child: SingleChildScrollView(
@@ -36,11 +37,11 @@ class ContactPage extends StatelessWidget {
                       children: [
                         //WEIRD CURVE AND FACE SECTION
                         CurveNFace(
-                          widgetFlex: 2,
+                          widgetWidth: 0.28 * width,
                         ),
                         //ABOUT CONTENT SECTION
-                        Expanded(
-                          flex: 5,
+                        Container(
+                          width: 0.65 * width,
                           child: Container(
                             // color: Colors.amber,
                             child: Column(

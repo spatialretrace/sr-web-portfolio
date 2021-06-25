@@ -5,14 +5,14 @@ import 'package:my_landing_page/widgets/intro_video.dart';
 class IntroVideoBio extends StatelessWidget {
   const IntroVideoBio({
     Key key,
-    @required this.widgetFlex,
+    @required this.widgetHeight,
   }) : super(key: key);
-  final int widgetFlex;
+  final double widgetHeight;
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: widgetFlex,
+    return Container(
+      height: widgetHeight,
       child: Container(
         padding: EdgeInsets.only(
           bottom: 30,

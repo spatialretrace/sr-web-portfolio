@@ -35,19 +35,22 @@ final List<ReviewItem> reviews = [
 class ReviewList extends StatelessWidget {
   const ReviewList({
     Key key,
+    @required this.widgetWidth,
   }) : super(key: key);
 
+  final double widgetWidth;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 6,
+    return Container(
+      width: widgetWidth,
       child: Container(
         margin: EdgeInsets.only(right: 10),
         // color: Colors.white,
         child: ListView(
           scrollDirection: Axis.horizontal,
+          // controller: ScrollController(). NEED TO WORK ON THIS!!
           children: [
-            for (var review in reviews) review.tileProjectOnHover,
+            for (var review in reviews) review.reviewOnHover,
           ],
         ),
       ),
@@ -72,22 +75,18 @@ class ReviewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double reviewListWidth = 200;
+    final double height = MediaQuery.of(context).size.height * 0.2;
     return Container(
-      width: 200,
+      width: reviewListWidth,
       child: Row(
         children: [
-          Expanded(
-            flex: 3,
-            child:
-                // SizedBox(
-                //   width: 100,
-                //   height: 100,
-                //   child:
-                reviewAvatar,
-            // ),
+          Container(
+            width: 0.4 * reviewListWidth,
+            child: reviewAvatar,
           ),
-          Expanded(
-            flex: 5,
+          Container(
+            width: 0.5 * reviewListWidth,
             child: Container(
               margin: EdgeInsets.only(left: 10),
               child: Column(
@@ -96,8 +95,8 @@ class ReviewItem extends StatelessWidget {
                   SizedBox(
                     height: 50,
                   ),
-                  Expanded(
-                    flex: 4,
+                  Container(
+                    height: 0.4 * height,
                     child: Text(
                       reviewText,
                       style: TextStyle(
@@ -106,8 +105,8 @@ class ReviewItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Expanded(
-                    flex: 2,
+                  Container(
+                    height: 0.2 * height,
                     child: Text(
                       reviewerName,
                       style: TextStyle(
@@ -117,8 +116,8 @@ class ReviewItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Expanded(
-                    flex: 1,
+                  Container(
+                    height: 0.1 * height,
                     child: Text(
                       reviewerDesignation,
                       style: TextStyle(
@@ -127,8 +126,8 @@ class ReviewItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Expanded(
-                    flex: 1,
+                  Container(
+                    height: 0.1 * height,
                     child: Text(
                       reviewerPlace,
                       style: TextStyle(
@@ -137,9 +136,6 @@ class ReviewItem extends StatelessWidget {
                         fontStyle: FontStyle.italic,
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 50,
                   ),
                 ],
               ),
