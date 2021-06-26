@@ -27,7 +27,7 @@ class _PortfolioProjectState extends State<PortfolioProject> {
     final double tileProjectDimension = (currentWorkWidth * 0.9) / 3;
     // final double currentWorkWidth = MediaQuery.of(context).size.width;
     // print(currentWorkWidth);
-    String projectImage = 'assets/' + widget.previewImage;
+    String projectImage = widget.previewImage;
     projectTitle.add(widget.projectName);
 
     return Column(

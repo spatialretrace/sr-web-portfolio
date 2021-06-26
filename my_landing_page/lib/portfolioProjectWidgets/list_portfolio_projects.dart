@@ -10,10 +10,10 @@ import 'package:my_landing_page/portfolioProjectWidgets/Retracer/retracer_e_stud
 
 final List<Project> projects = [
   Project(
-    previewImage: 'projectAssets/Retracer/preview_Retracer.png',
-    hoverImage: 'projectAssets/Retracer/hover_Retracer.png',
-    slide3Image: 'projectAssets/Retracer/hover_Retracer.png',
-    slide4Image: 'projectAssets/Retracer/hover_Retracer.png',
+    previewImage: 'assets/projectAssets/Retracer/preview_Retracer.png',
+    hoverImage: 'assets/projectAssets/Retracer/hover_Retracer.png',
+    slide3Image: 'assets/projectAssets/Retracer/hover_Retracer.png',
+    slide4Image: 'assets/projectAssets/Retracer/hover_Retracer.png',
     designCategory: [
       'Hybrid Application',
       'Architecture',
@@ -32,10 +32,11 @@ final List<Project> projects = [
     color5: Color(0xFFC45B2D),
   ),
   Project(
-    previewImage: 'projectAssets/Max_The_Spider/preview_MaxTheSpider.png',
-    hoverImage: 'projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
-    slide3Image: 'projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
-    slide4Image: 'projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
+    previewImage:
+        'assets/projectAssets/Max_The_Spider/preview_MaxTheSpider.png',
+    hoverImage: 'assets/projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
+    slide3Image: 'assets/projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
+    slide4Image: 'assets/projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
     designCategory: [
       'Illustration',
       'Surreal',
@@ -52,10 +53,10 @@ final List<Project> projects = [
     color5: Color(0xFFFFFFFF),
   ),
   Project(
-    previewImage: 'projectAssets/Macchegaun_School/preview_MSchool.png',
-    hoverImage: 'projectAssets/Macchegaun_School/hover_MSchool.png',
-    slide3Image: 'projectAssets/Macchegaun_School/hover_MSchool.png',
-    slide4Image: 'projectAssets/Macchegaun_School/hover_MSchool.png',
+    previewImage: 'assets/projectAssets/Macchegaun_School/preview_MSchool.png',
+    hoverImage: 'assets/projectAssets/Macchegaun_School/hover_MSchool.png',
+    slide3Image: 'assets/projectAssets/Macchegaun_School/hover_MSchool.png',
+    slide4Image: 'assets/projectAssets/Macchegaun_School/hover_MSchool.png',
     designCategory: [
       'Disaster Rehabilitation',
       'Vernacular Architecture',
@@ -73,10 +74,10 @@ final List<Project> projects = [
     color5: Color(0xFFD38C82),
   ),
   Project(
-    previewImage: 'projectAssets/Marilou/preview_Marilou.png',
-    hoverImage: 'projectAssets/Marilou/hover_Marilou.jpeg',
-    slide3Image: 'projectAssets/Marilou/slide3.png',
-    slide4Image: 'projectAssets/Marilou/slide4.gif',
+    previewImage: 'assets/projectAssets/Marilou/preview_Marilou.png',
+    hoverImage: 'assets/projectAssets/Marilou/hover_Marilou.jpeg',
+    slide3Image: 'assets/projectAssets/Marilou/slide3.png',
+    slide4Image: 'assets/projectAssets/Marilou/slide4.gif',
     designCategory: [
       'Illustration',
       'Children\'s Book',
@@ -94,10 +95,10 @@ final List<Project> projects = [
     color5: Color(0xFFE84F67),
   ),
   Project(
-    previewImage: 'projectAssets/CAD_Temple/preview_CADTemple.jpeg',
-    hoverImage: 'projectAssets/CAD_Temple/hover_CADTemple.jpeg',
-    slide3Image: 'projectAssets/CAD_Temple/CADTemple_Slide2.jpg',
-    slide4Image: 'projectAssets/CAD_Temple/CADTemple_Slide4.png',
+    previewImage: 'assets/projectAssets/CAD_Temple/preview_CADTemple.jpeg',
+    hoverImage: 'assets/projectAssets/CAD_Temple/hover_CADTemple.jpeg',
+    slide3Image: 'assets/projectAssets/CAD_Temple/CADTemple_Slide2.jpg',
+    slide4Image: 'assets/projectAssets/CAD_Temple/CADTemple_Slide4.png',
     designCategory: [
       'Puzzle Design',
       'Hybrid',
@@ -115,10 +116,11 @@ final List<Project> projects = [
     color5: Color(0xFFFFFFFF),
   ),
   Project(
-    previewImage: 'projectAssets/Hybrid_Library/preview_HybridLibrary.png',
-    hoverImage: 'projectAssets/Hybrid_Library/hover_HybridLibrary.png',
-    slide3Image: 'projectAssets/Hybrid_Library/hover_HybridLibrary.png',
-    slide4Image: 'projectAssets/Hybrid_Library/hover_HybridLibrary.png',
+    previewImage:
+        'assets/projectAssets/Hybrid_Library/preview_HybridLibrary.png',
+    hoverImage: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
+    slide3Image: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
+    slide4Image: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
     designCategory: [
       'Architecture',
       'Hybrid',
@@ -138,10 +140,10 @@ final List<Project> projects = [
   ),
   // Project(projectName: 'WearAR'),
   Project(
-    previewImage: 'projectAssets/Vendor_Van/preview_VendorVan.png',
-    hoverImage: 'projectAssets/Vendor_Van/hover_VendorVan.png',
-    slide3Image: 'projectAssets/Vendor_Van/slide3.png',
-    slide4Image: 'projectAssets/Vendor_Van/slide4.png',
+    previewImage: 'assets/projectAssets/Vendor_Van/preview_VendorVan.png',
+    hoverImage: 'assets/projectAssets/Vendor_Van/hover_VendorVan.png',
+    slide3Image: 'assets/projectAssets/Vendor_Van/slide3.png',
+    slide4Image: 'assets/projectAssets/Vendor_Van/slide4.png',
     designCategory: [
       'Product Design',
       'Retail',
