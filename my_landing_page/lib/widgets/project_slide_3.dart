@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/project_detail.dart';
 
 class ProjectSlide3 extends StatelessWidget {
   const ProjectSlide3({
     Key key,
     @required this.currentProject,
-    @required this.projectDetail,
+    @required this.slideWidth,
+    @required this.slideHeight,
   }) : super(key: key);
 
   final Project currentProject;
-  final Widget projectDetail;
+  final double slideWidth;
+  final double slideHeight;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 760,
-      // width: 960,
+      height: slideHeight,
       margin: EdgeInsets.only(
         top: 20,
         right: 60,
@@ -31,12 +33,12 @@ class ProjectSlide3 extends StatelessWidget {
       child:
           //PROJECT SLIDER CONTENT
           Container(
-        width: 960,
+        width: slideWidth,
         margin: EdgeInsets.only(top: 30, right: 60, left: 60, bottom: 60),
         child: Row(
           children: [
-            Expanded(
-              flex: 1,
+            Container(
+              width: 0.4 * slideWidth,
               child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +47,12 @@ class ProjectSlide3 extends StatelessWidget {
                       height: 40,
                     ),
                     //PROJECT DETAIL SECTION
-                    projectDetail,
+                    ProjectDetail(
+                      widgetHeight: 0.8 * slideHeight,
+                      widgetWidth: 0.4 * slideWidth,
+                      darkTextColor: currentProject.color5,
+                      lightTextColor: currentProject.color1,
+                    ),
                   ],
                 ),
               ),
@@ -54,8 +61,8 @@ class ProjectSlide3 extends StatelessWidget {
               width: 30,
             ),
             //PROJECT DETAIL IMAGE
-            Expanded(
-              flex: 2,
+            Container(
+              width: 0.55 * slideWidth,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),

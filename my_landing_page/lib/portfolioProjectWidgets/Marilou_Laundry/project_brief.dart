@@ -6,11 +6,15 @@ import 'package:url_launcher/url_launcher.dart';
 class ProjectBrief extends StatelessWidget {
   const ProjectBrief({
     Key key,
+    @required this.widgetWidth,
+    @required this.widgetHeight,
     @required this.darkTextColor,
     @required this.lightTextColor,
     @required this.accentTextColor,
   }) : super(key: key);
 
+  final double widgetWidth;
+  final double widgetHeight;
   final Color darkTextColor;
   final Color lightTextColor;
   final Color accentTextColor;
@@ -18,8 +22,9 @@ class ProjectBrief extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double briefFontSize = 20;
-    return Expanded(
-      flex: 4,
+    return Container(
+      height: widgetHeight,
+      width: widgetWidth,
       child: Container(
         child: Text.rich(
           TextSpan(children: [

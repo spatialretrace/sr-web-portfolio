@@ -3,18 +3,23 @@ import 'package:flutter/material.dart';
 class ProjectDetail extends StatelessWidget {
   const ProjectDetail({
     Key key,
+    @required this.widgetWidth,
+    @required this.widgetHeight,
     @required this.darkTextColor,
     @required this.lightTextColor,
   }) : super(key: key);
 
+  final double widgetWidth;
+  final double widgetHeight;
   final Color darkTextColor;
   final Color lightTextColor;
 
   @override
   Widget build(BuildContext context) {
     final double detailFontSize = 16;
-    return Expanded(
-      flex: 4,
+    return Container(
+      height: widgetHeight,
+      width: widgetWidth,
       child: Container(
         child: Text.rich(
           TextSpan(children: [

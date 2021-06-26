@@ -5,14 +5,18 @@ class ProjectSlide4 extends StatelessWidget {
   const ProjectSlide4({
     Key key,
     @required this.currentProject,
+    @required this.slideWidth,
+    @required this.slideHeight,
   }) : super(key: key);
 
   final Project currentProject;
+  final double slideWidth;
+  final double slideHeight;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 760,
+      height: slideHeight,
       // width: 960,
       margin: EdgeInsets.only(
         top: 20,
@@ -29,17 +33,14 @@ class ProjectSlide4 extends StatelessWidget {
       child:
           //PROJECT SLIDER CONTENT
           Container(
-        width: 960,
+        width: slideWidth,
         margin: EdgeInsets.only(top: 30, right: 60, left: 60, bottom: 60),
-        child: Expanded(
-          // flex: 2,
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                  image: AssetImage('projectAssets/Marilou/slide4.gif'),
-                  fit: BoxFit.fitWidth),
-            ),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            image: DecorationImage(
+                image: AssetImage('projectAssets/Marilou/slide4.gif'),
+                fit: BoxFit.fitWidth),
           ),
         ),
       ),

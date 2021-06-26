@@ -4,6 +4,8 @@ class ProjectName extends StatelessWidget {
   const ProjectName({
     Key key,
     @required this.currentProjectName,
+    @required this.widgetWidth,
+    @required this.widgetHeight,
     @required this.lightTextColor,
     @required this.midTextColor,
     @required this.topFontSize,
@@ -11,6 +13,8 @@ class ProjectName extends StatelessWidget {
   }) : super(key: key);
 
   final List<String> currentProjectName;
+  final double widgetWidth;
+  final double widgetHeight;
   final Color lightTextColor;
   final Color midTextColor;
   final double topFontSize;
@@ -18,8 +22,9 @@ class ProjectName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 3,
+    return Container(
+      height: widgetHeight,
+      width: widgetWidth,
       child: Container(
         // Check and display project name
         alignment: Alignment.bottomLeft,
