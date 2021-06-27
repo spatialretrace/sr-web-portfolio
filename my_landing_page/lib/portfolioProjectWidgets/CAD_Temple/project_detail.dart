@@ -3,17 +3,23 @@ import 'package:flutter/material.dart';
 class ProjectDetail extends StatelessWidget {
   const ProjectDetail({
     Key key,
+    @required this.widgetWidth,
+    @required this.widgetHeight,
     @required this.darkTextColor,
     @required this.lightTextColor,
   }) : super(key: key);
 
+  final double widgetWidth;
+  final double widgetHeight;
   final Color darkTextColor;
   final Color lightTextColor;
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 4,
+    final double detailFontSize = 22;
+    return Container(
+      height: widgetHeight,
+      width: widgetWidth,
       child: Container(
         child: Text.rich(
           TextSpan(children: [
@@ -23,7 +29,7 @@ class ProjectDetail extends StatelessWidget {
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
-                fontSize: 22,
+                fontSize: detailFontSize,
                 fontWeight: FontWeight.w100,
                 height: 1.5,
               ),
@@ -33,7 +39,7 @@ class ProjectDetail extends StatelessWidget {
               style: TextStyle(
                 color: lightTextColor,
                 fontFamily: 'Futura',
-                fontSize: 22,
+                fontSize: detailFontSize,
                 fontWeight: FontWeight.bold,
                 height: 1.5,
               ),
@@ -44,7 +50,7 @@ class ProjectDetail extends StatelessWidget {
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
-                fontSize: 22,
+                fontSize: detailFontSize,
                 fontWeight: FontWeight.w100,
                 height: 1.5,
               ),

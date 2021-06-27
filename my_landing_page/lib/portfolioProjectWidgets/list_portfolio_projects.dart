@@ -12,6 +12,7 @@ final List<Project> projects = [
   Project(
     previewImage: 'assets/projectAssets/Retracer/preview_Retracer.png',
     hoverImage: 'assets/projectAssets/Retracer/hover_Retracer.png',
+    slide2Image: 'assets/projectAssets/Retracer/hover_Retracer.png',
     slide3Image: 'assets/projectAssets/Retracer/hover_Retracer.png',
     slide4Image: 'assets/projectAssets/Retracer/hover_Retracer.png',
     designCategory: [
@@ -35,6 +36,7 @@ final List<Project> projects = [
     previewImage:
         'assets/projectAssets/Max_The_Spider/preview_MaxTheSpider.png',
     hoverImage: 'assets/projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
+    slide2Image: 'assets/projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
     slide3Image: 'assets/projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
     slide4Image: 'assets/projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
     designCategory: [
@@ -55,6 +57,7 @@ final List<Project> projects = [
   Project(
     previewImage: 'assets/projectAssets/Macchegaun_School/preview_MSchool.png',
     hoverImage: 'assets/projectAssets/Macchegaun_School/hover_MSchool.png',
+    slide2Image: 'assets/projectAssets/Macchegaun_School/hover_MSchool.png',
     slide3Image: 'assets/projectAssets/Macchegaun_School/hover_MSchool.png',
     slide4Image: 'assets/projectAssets/Macchegaun_School/hover_MSchool.png',
     designCategory: [
@@ -76,6 +79,7 @@ final List<Project> projects = [
   Project(
     previewImage: 'assets/projectAssets/Marilou/preview_Marilou.png',
     hoverImage: 'assets/projectAssets/Marilou/hover_Marilou.jpeg',
+    slide2Image: 'assets/projectAssets/Marilou/hover_Marilou.jpeg',
     slide3Image: 'assets/projectAssets/Marilou/slide3.png',
     slide4Image: 'assets/projectAssets/Marilou/slide4.gif',
     designCategory: [
@@ -97,7 +101,8 @@ final List<Project> projects = [
   Project(
     previewImage: 'assets/projectAssets/CAD_Temple/preview_CADTemple.jpeg',
     hoverImage: 'assets/projectAssets/CAD_Temple/hover_CADTemple.jpeg',
-    slide3Image: 'assets/projectAssets/CAD_Temple/CADTemple_Slide2.jpg',
+    slide2Image: 'assets/projectAssets/CAD_Temple/CADTemple_Slide2.jpg',
+    slide3Image: 'assets/projectAssets/CAD_Temple/hover_CADTemple.jpeg',
     slide4Image: 'assets/projectAssets/CAD_Temple/CADTemple_Slide4.png',
     designCategory: [
       'Puzzle Design',
@@ -119,6 +124,7 @@ final List<Project> projects = [
     previewImage:
         'assets/projectAssets/Hybrid_Library/preview_HybridLibrary.png',
     hoverImage: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
+    slide2Image: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
     slide3Image: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
     slide4Image: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
     designCategory: [
@@ -142,6 +148,7 @@ final List<Project> projects = [
   Project(
     previewImage: 'assets/projectAssets/Vendor_Van/preview_VendorVan.png',
     hoverImage: 'assets/projectAssets/Vendor_Van/hover_VendorVan.png',
+    slide2Image: 'assets/projectAssets/Vendor_Van/hover_VendorVan.png',
     slide3Image: 'assets/projectAssets/Vendor_Van/slide3.png',
     slide4Image: 'assets/projectAssets/Vendor_Van/slide4.png',
     designCategory: [
@@ -181,6 +188,7 @@ class Project {
   final String projectName;
   final String previewImage;
   final String hoverImage;
+  final String slide2Image;
   final String slide3Image;
   final String slide4Image;
   final List<String> designCategory;
@@ -198,6 +206,7 @@ class Project {
     @required this.projectName,
     @required this.previewImage,
     @required this.hoverImage,
+    @required this.slide2Image,
     @required this.slide3Image,
     @required this.slide4Image,
     @required this.designCategory,

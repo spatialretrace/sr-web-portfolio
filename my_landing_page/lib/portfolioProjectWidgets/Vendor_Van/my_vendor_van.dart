@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Text/project_blog.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Text/project_brief.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Text/project_detail.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/project_slide_1.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/project_slide_2.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/project_slide_3.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/project_slide_4.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/project_blog.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/project_brief.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/project_detail.dart';
+import 'package:my_landing_page/widgets/project_slide_1.dart';
+import 'package:my_landing_page/widgets/project_slide_2.dart';
+import 'package:my_landing_page/widgets/project_slide_3.dart';
+import 'package:my_landing_page/widgets/project_slide_4.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
 import 'package:my_landing_page/widgets/carousel_demo.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
@@ -21,18 +21,25 @@ class MyVendorVan extends StatelessWidget {
     final Color homeBGback = Colors.amber;
     final Color homeBGfront = Colors.black;
     final double width = MediaQuery.of(context).size.width;
+    final double slideWidth = 960;
+    final double slideHeight = 760;
     Project currentProject;
+    List<String> currentProjectName;
     Widget projectBrief;
     Widget projectDetail;
-    List<String> currentProjectName;
     for (var project in projects) {
       if (project.projectName == 'VENDOR STALL') {
         currentProject = project;
         projectBrief = ProjectBrief(
+          widgetHeight: 0.4 * slideHeight,
+          widgetWidth: 0.4 * slideWidth,
           darkTextColor: currentProject.color4,
           lightTextColor: currentProject.color2,
+          accentTextColor: currentProject.color5,
         );
         projectDetail = ProjectDetail(
+          widgetHeight: 0.8 * slideHeight,
+          widgetWidth: 0.4 * slideWidth,
           darkTextColor: currentProject.color5,
           lightTextColor: currentProject.color1,
         );
@@ -44,17 +51,25 @@ class MyVendorVan extends StatelessWidget {
       ProjectSlide1(
         currentProject: currentProject,
         currentProjectName: currentProjectName,
+        slideWidth: slideWidth,
+        slideHeight: slideHeight,
         projectBrief: projectBrief,
       ),
       ProjectSlide2(
         currentProject: currentProject,
+        slideWidth: slideWidth,
+        slideHeight: slideHeight,
       ),
       ProjectSlide3(
         currentProject: currentProject,
+        slideWidth: slideWidth,
+        slideHeight: slideHeight,
         projectDetail: projectDetail,
       ),
       ProjectSlide4(
         currentProject: currentProject,
+        slideWidth: slideWidth,
+        slideHeight: slideHeight,
       ),
     ];
     return Material(
@@ -66,27 +81,27 @@ class MyVendorVan extends StatelessWidget {
               homeBGfront: homeBGfront,
               pageHeight: width * 1.25,
             ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  //HEADER SECTION
-                  HeaderSection(),
-                  //PORTFOLIO PROJECT NAVIGATOR
-                  NavPortfolio(width: width),
-                  SizedBox(
-                    height: 50,
-                  ),
-                  //PROJECT CAROUSEL SECTION
-                  Stack(alignment: AlignmentDirectional.center, children: [
-                    CarouselDemo(widgetList: list),
-                  ]),
-                  //PROJECT BLOG SECTION
-                  ProjectBlog(
-                    projectBlogColor: currentProject.color3,
-                  ),
-                ],
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                //HEADER SECTION
+                HeaderSection(),
+                //PORTFOLIO PROJECT NAVIGATOR
+                NavPortfolio(width: width),
+                SizedBox(
+                  height: 50,
+                ),
+                //PROJECT CAROUSEL SECTION
+                Stack(alignment: AlignmentDirectional.center, children: [
+                  CarouselDemo(widgetList: list),
+                ]),
+                //PROJECT BLOG SECTION
+                ProjectBlog(
+                  currentProject: currentProject,
+                  blogHeight: 520,
+                  blogWidth: 1080,
+                ),
+              ],
             ),
             //FOOTER SECTION
             Positioned(

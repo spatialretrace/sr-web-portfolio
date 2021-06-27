@@ -39,7 +39,7 @@ class ProjectSlide4 extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             image: DecorationImage(
-                image: AssetImage('projectAssets/Marilou/slide4.gif'),
+                image: AssetImage(currentProject.slide4Image),
                 fit: BoxFit.fitWidth),
           ),
         ),

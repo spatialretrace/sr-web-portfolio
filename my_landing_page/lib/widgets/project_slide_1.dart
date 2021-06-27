@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/project_brief.dart';
 import 'package:my_landing_page/widgets/project_categories.dart';
 import 'package:my_landing_page/widgets/project_name.dart';
 
@@ -11,12 +10,14 @@ class ProjectSlide1 extends StatelessWidget {
     @required this.currentProjectName,
     @required this.slideWidth,
     @required this.slideHeight,
+    @required this.projectBrief,
   }) : super(key: key);
 
   final Project currentProject;
   final List<String> currentProjectName;
   final double slideWidth;
   final double slideHeight;
+  final Widget projectBrief;
 
   @override
   Widget build(BuildContext context) {
@@ -89,13 +90,7 @@ class ProjectSlide1 extends StatelessWidget {
                     height: 20,
                   ),
                   //PROJECT BRIEF SECTION
-                  ProjectBrief(
-                    widgetHeight: 0.4 * slideHeight,
-                    widgetWidth: 0.4 * slideWidth,
-                    darkTextColor: currentProject.color4,
-                    lightTextColor: currentProject.color2,
-                    accentTextColor: currentProject.color5,
-                  ),
+                  projectBrief,
                 ],
               ),
             ),

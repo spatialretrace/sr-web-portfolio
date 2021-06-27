@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
 
 class ProjectBlog extends StatelessWidget {
   const ProjectBlog({
     Key key,
-    @required this.projectBlogColor,
+    @required this.currentProject,
+    @required this.blogWidth,
+    @required this.blogHeight,
   }) : super(key: key);
 
-  final Color projectBlogColor;
+  final Project currentProject;
+  final double blogWidth;
+  final double blogHeight;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 520,
+      height: blogHeight,
+      width: blogWidth,
       margin: EdgeInsets.symmetric(horizontal: 100),
       // width: 1080,
       decoration: BoxDecoration(
-        color: projectBlogColor,
+        color: currentProject.color3,
       ),
       child: Row(
         children: [
-          Expanded(
+          Container(
+            width: 0.5 * blogWidth,
             child: Container(
               margin: EdgeInsets.all(30),
               decoration: BoxDecoration(
@@ -28,7 +35,8 @@ class ProjectBlog extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
+          Container(
+            width: 0.5 * blogWidth,
             child: Container(
               margin: EdgeInsets.all(30),
               decoration: BoxDecoration(

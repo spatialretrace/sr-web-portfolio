@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/project_detail.dart';
 
 class ProjectSlide3 extends StatelessWidget {
   const ProjectSlide3({
@@ -8,11 +7,13 @@ class ProjectSlide3 extends StatelessWidget {
     @required this.currentProject,
     @required this.slideWidth,
     @required this.slideHeight,
+    @required this.projectDetail,
   }) : super(key: key);
 
   final Project currentProject;
   final double slideWidth;
   final double slideHeight;
+  final Widget projectDetail;
 
   @override
   Widget build(BuildContext context) {
@@ -47,12 +48,7 @@ class ProjectSlide3 extends StatelessWidget {
                       height: 40,
                     ),
                     //PROJECT DETAIL SECTION
-                    ProjectDetail(
-                      widgetHeight: 0.8 * slideHeight,
-                      widgetWidth: 0.4 * slideWidth,
-                      darkTextColor: currentProject.color5,
-                      lightTextColor: currentProject.color1,
-                    ),
+                    projectDetail,
                   ],
                 ),
               ),
@@ -67,7 +63,7 @@ class ProjectSlide3 extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                      image: AssetImage('projectAssets/Marilou/slide3.png'),
+                      image: AssetImage(currentProject.slide3Image),
                       fit: BoxFit.cover),
                 ),
               ),

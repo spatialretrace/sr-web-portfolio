@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:my_landing_page/widgets/project_slide_2.dart';
 import 'package:my_landing_page/widgets/project_slide_3.dart';
 import 'package:my_landing_page/widgets/project_slide_4.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/project_brief.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/project_detail.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/project_blog.dart';
 import 'package:my_landing_page/widgets/project_slide_1.dart';
-
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
 import 'package:my_landing_page/widgets/carousel_demo.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
@@ -24,9 +25,24 @@ class MarilouLaundry extends StatelessWidget {
     final double slideHeight = 760;
     Project currentProject;
     List<String> currentProjectName;
+    Widget projectBrief;
+    Widget projectDetail;
     for (var project in projects) {
       if (project.projectName == 'MISCHIEVOUS MARILU') {
         currentProject = project;
+        projectBrief = ProjectBrief(
+          widgetHeight: 0.4 * slideHeight,
+          widgetWidth: 0.4 * slideWidth,
+          darkTextColor: currentProject.color4,
+          lightTextColor: currentProject.color2,
+          accentTextColor: currentProject.color5,
+        );
+        projectDetail = ProjectDetail(
+          widgetHeight: 0.8 * slideHeight,
+          widgetWidth: 0.4 * slideWidth,
+          darkTextColor: currentProject.color5,
+          lightTextColor: currentProject.color1,
+        );
         debugPrint('${currentProject.projectName} HAS BEEN INITIALIZED!!!');
         currentProjectName = currentProject.projectName.split(' ');
       }
@@ -37,6 +53,7 @@ class MarilouLaundry extends StatelessWidget {
         currentProjectName: currentProjectName,
         slideWidth: slideWidth,
         slideHeight: slideHeight,
+        projectBrief: projectBrief,
       ),
       ProjectSlide2(
         currentProject: currentProject,
@@ -47,6 +64,7 @@ class MarilouLaundry extends StatelessWidget {
         currentProject: currentProject,
         slideWidth: slideWidth,
         slideHeight: slideHeight,
+        projectDetail: projectDetail,
       ),
       ProjectSlide4(
         currentProject: currentProject,
