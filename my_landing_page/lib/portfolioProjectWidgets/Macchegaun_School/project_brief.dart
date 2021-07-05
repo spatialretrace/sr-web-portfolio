@@ -26,8 +26,7 @@ class ProjectBrief extends StatelessWidget {
         child: Text.rich(
           TextSpan(children: [
             TextSpan(
-              text:
-                  'Confronting buidling material textures and attention to detail in cultural spaces such as the ',
+              text: 'Drawing inspiration from ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
@@ -37,7 +36,27 @@ class ProjectBrief extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: 'Sensoji Temple, Tokyo',
+              text: 'Newari',
+              style: TextStyle(
+                color: accentTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
+                fontStyle: FontStyle.italic,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: ' vernacular architecture to reimagine a ',
+              style: TextStyle(
+                color: darkTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
+                fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: 'school in New Machhegaun',
               style: TextStyle(
                 color: lightTextColor,
                 fontFamily: 'Futura',
@@ -48,12 +67,22 @@ class ProjectBrief extends StatelessWidget {
             ),
             TextSpan(
               text:
-                  ' through a wooden puzzle generated from a neutral AutoCAD drawing.',
+                  ' township as part of the disaster rehabilitation initiatives since the ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
                 fontSize: briefFontSize,
                 fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: 'April 2015 earthquake in Nepal.',
+              style: TextStyle(
+                color: lightTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
+                fontStyle: FontStyle.italic,
                 height: 1.5,
               ),
             ),

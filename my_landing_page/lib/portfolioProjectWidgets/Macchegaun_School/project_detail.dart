@@ -16,7 +16,7 @@ class ProjectDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double detailFontSize = 16;
+    final double detailFontSize = 18;
     return Container(
       height: widgetHeight,
       width: widgetWidth,
@@ -25,76 +25,45 @@ class ProjectDetail extends StatelessWidget {
           TextSpan(children: [
             TextSpan(
               text:
-                  'In this proposal, food truck design meets furniture design with the help of upcycled industrial debris such as metal sheets, rebars and PVC pipes. The stall\'s dynamic feature is the ',
+                  'According to Roger Anger, architect and visionary of Auroville Schools, India, "',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
                 fontSize: detailFontSize,
                 fontWeight: FontWeight.w100,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text: 'pull-out stair shelf',
-              style: TextStyle(
-                color: lightTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.bold,
                 height: 1.5,
               ),
             ),
             TextSpan(
               text:
-                  ' that allows access to rooftop sleeping area covered by a convertible awning. It also helps store ingredients needed to sell the classic dish, the ',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text: 'baked potato.\n\n\n',
+                  'Education of a child should take place amidst life and not be confined to school. It must be open to the outside world.',
               style: TextStyle(
                 color: lightTextColor,
                 fontFamily: 'Futura',
                 fontSize: detailFontSize,
-                fontWeight: FontWeight.bold,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text:
-                  'The stall\'s layout is optimized to suit the quick bodily motions of the vendor while working with ',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text: 'each ingredient within arm\'s reach.',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
                 fontStyle: FontStyle.italic,
                 height: 1.5,
               ),
             ),
             TextSpan(
               text:
-                  ' All electric appliances needed to sustain cooking and sleeping activities are powered by a compact generator-invertor.',
+                  '" Based on Anger\'s insight on rural education, the envelope of the Machhegaun School is envisioned for free progress through openness, encouraging young minds to explore through outdoor activities and play. \n\n\nUsing locally available materials, the school\'s structure is kept light, inviting and grounded, while respecting Newari symmetry of its elements and spaces. ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
                 fontSize: detailFontSize,
                 fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text:
+                  'The floor plan of the school is designed to be built in 3 phases that help the townsfolk transition from the disaster to everyday teaching and learning activities.',
+              style: TextStyle(
+                color: lightTextColor,
+                fontFamily: 'Futura',
+                fontSize: detailFontSize,
+                fontWeight: FontWeight.bold,
                 height: 1.5,
               ),
             ),

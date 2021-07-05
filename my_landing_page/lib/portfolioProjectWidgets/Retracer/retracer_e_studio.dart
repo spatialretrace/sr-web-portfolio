@@ -34,13 +34,13 @@ class RetracerEStudio extends StatelessWidget {
           widgetHeight: 0.4 * slideHeight,
           widgetWidth: 0.4 * slideWidth,
           darkTextColor: currentProject.color4,
-          lightTextColor: currentProject.color2,
-          accentTextColor: currentProject.color5,
+          lightTextColor: currentProject.color5,
+          accentTextColor: currentProject.color2,
         );
         projectDetail = ProjectDetail(
           widgetHeight: 0.8 * slideHeight,
           widgetWidth: 0.4 * slideWidth,
-          darkTextColor: currentProject.color5,
+          darkTextColor: currentProject.color2,
           lightTextColor: currentProject.color1,
         );
         debugPrint('${currentProject.projectName} HAS BEEN INITIALIZED!!!');

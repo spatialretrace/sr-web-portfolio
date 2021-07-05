@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 
-class ProjectDetail extends StatelessWidget {
-  const ProjectDetail({
+class ProjectBrief extends StatelessWidget {
+  const ProjectBrief({
     Key key,
     @required this.widgetWidth,
     @required this.widgetHeight,
     @required this.darkTextColor,
     @required this.lightTextColor,
+    @required this.accentTextColor,
   }) : super(key: key);
 
   final double widgetWidth;
   final double widgetHeight;
   final Color darkTextColor;
   final Color lightTextColor;
+  final Color accentTextColor;
 
   @override
   Widget build(BuildContext context) {
-    final double detailFontSize = 16;
+    final double briefFontSize = 21;
     return Container(
       height: widgetHeight,
       width: widgetWidth,
@@ -25,76 +27,63 @@ class ProjectDetail extends StatelessWidget {
           TextSpan(children: [
             TextSpan(
               text:
-                  'In this proposal, food truck design meets furniture design with the help of upcycled industrial debris such as metal sheets, rebars and PVC pipes. The stall\'s dynamic feature is the ',
+                  'Harmonizing technological innovation with traditional narratives by designing a ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
-                fontSize: detailFontSize,
+                fontSize: briefFontSize,
                 fontWeight: FontWeight.w100,
                 height: 1.5,
               ),
             ),
             TextSpan(
-              text: 'pull-out stair shelf',
+              text: 'hybrid museum',
               style: TextStyle(
                 color: lightTextColor,
                 fontFamily: 'Futura',
-                fontSize: detailFontSize,
+                fontSize: briefFontSize,
+                fontWeight: FontWeight.bold,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: ' in ',
+              style: TextStyle(
+                color: darkTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
+                fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: 'Saadiyat Island, Abu Dhabi, UAE',
+              style: TextStyle(
+                color: lightTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
                 fontWeight: FontWeight.bold,
                 height: 1.5,
               ),
             ),
             TextSpan(
               text:
-                  ' that allows access to rooftop sleeping area covered by a convertible awning. It also helps store ingredients needed to sell the classic dish, the ',
+                  ' such that visitors can witness the history of UAE\'s rapid development while onboard a ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
-                fontSize: detailFontSize,
+                fontSize: briefFontSize,
                 fontWeight: FontWeight.w100,
                 height: 1.5,
               ),
             ),
             TextSpan(
-              text: 'baked potato.\n\n\n',
+              text: 'rollercoaster ride merged with the museum\'s envelope.',
               style: TextStyle(
-                color: lightTextColor,
+                color: accentTextColor,
                 fontFamily: 'Futura',
-                fontSize: detailFontSize,
+                fontSize: briefFontSize,
                 fontWeight: FontWeight.bold,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text:
-                  'The stall\'s layout is optimized to suit the quick bodily motions of the vendor while working with ',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text: 'each ingredient within arm\'s reach.',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
-                fontStyle: FontStyle.italic,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text:
-                  ' All electric appliances needed to sustain cooking and sleeping activities are powered by a compact generator-invertor.',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
                 height: 1.5,
               ),
             ),

@@ -28,19 +28,19 @@ class MSchool extends StatelessWidget {
     Widget projectDetail;
     List<String> currentProjectName;
     for (var project in projects) {
-      if (project.projectName == 'MACCHEGAUN SCHOOL') {
+      if (project.projectName == 'MACHHEGAUN SCHOOL') {
         currentProject = project;
         projectBrief = ProjectBrief(
           widgetHeight: 0.4 * slideHeight,
           widgetWidth: 0.4 * slideWidth,
           darkTextColor: currentProject.color4,
-          lightTextColor: currentProject.color2,
+          lightTextColor: currentProject.color3,
           accentTextColor: currentProject.color5,
         );
         projectDetail = ProjectDetail(
           widgetHeight: 0.8 * slideHeight,
           widgetWidth: 0.4 * slideWidth,
-          darkTextColor: currentProject.color5,
+          darkTextColor: currentProject.color2,
           lightTextColor: currentProject.color1,
         );
         debugPrint('${currentProject.projectName} HAS BEEN INITIALIZED!!!');

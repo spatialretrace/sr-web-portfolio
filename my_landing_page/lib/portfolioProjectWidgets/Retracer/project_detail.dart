@@ -16,7 +16,7 @@ class ProjectDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double detailFontSize = 16;
+    final double detailFontSize = 20;
     return Container(
       height: widgetHeight,
       width: widgetWidth,
@@ -25,7 +25,7 @@ class ProjectDetail extends StatelessWidget {
           TextSpan(children: [
             TextSpan(
               text:
-                  'In this proposal, food truck design meets furniture design with the help of upcycled industrial debris such as metal sheets, rebars and PVC pipes. The stall\'s dynamic feature is the ',
+                  'The interface of Retracer has been designed through the paradigms of ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
@@ -35,66 +35,56 @@ class ProjectDetail extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: 'pull-out stair shelf',
+              text: 'design accessibility and human-machine interaction',
               style: TextStyle(
                 color: lightTextColor,
                 fontFamily: 'Futura',
                 fontSize: detailFontSize,
-                fontWeight: FontWeight.bold,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text:
-                  ' that allows access to rooftop sleeping area covered by a convertible awning. It also helps store ingredients needed to sell the classic dish, the ',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text: 'baked potato.\n\n\n',
-              style: TextStyle(
-                color: lightTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.bold,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text:
-                  'The stall\'s layout is optimized to suit the quick bodily motions of the vendor while working with ',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text: 'each ingredient within arm\'s reach.',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
                 fontStyle: FontStyle.italic,
                 height: 1.5,
               ),
             ),
             TextSpan(
               text:
-                  ' All electric appliances needed to sustain cooking and sleeping activities are powered by a compact generator-invertor.',
+                  ' for students who would potentially use this application from their respective touch devices. \n\n\nThe user experience is designed to facilitate ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
                 fontSize: detailFontSize,
                 fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text:
+                  'seamless collaboration in both virtual and physical spaces',
+              style: TextStyle(
+                color: lightTextColor,
+                fontFamily: 'Futura',
+                fontSize: detailFontSize,
+                fontWeight: FontWeight.bold,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text:
+                  ' that are either individual or collective in its ideation processes. Using the visual metaphor of a 3-dimensional room, this platform seeks to ',
+              style: TextStyle(
+                color: darkTextColor,
+                fontFamily: 'Futura',
+                fontSize: detailFontSize,
+                fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text:
+                  'promote the methods of situated learning while constructively building on top of each other\'s ideas.',
+              style: TextStyle(
+                color: lightTextColor,
+                fontFamily: 'Futura',
+                fontSize: detailFontSize,
+                fontWeight: FontWeight.bold,
                 height: 1.5,
               ),
             ),

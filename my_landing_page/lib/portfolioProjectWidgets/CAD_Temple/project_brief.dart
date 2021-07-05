@@ -18,7 +18,7 @@ class ProjectBrief extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double briefFontSize = 22;
+    final double briefFontSize = 24;
     return Container(
       height: widgetHeight,
       width: widgetWidth,

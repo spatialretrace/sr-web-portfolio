@@ -53,7 +53,7 @@ flutter:
   assets:
     - assets/
     - assets/projectAssets/CAD_Temple/
-    - assets/projectAssets/Hybrid_Library/
+    - assets/projectAssets/Hybrid_Museum/
     - assets/projectAssets/Macchegaun_School/
     - assets/projectAssets/Marilou/
     - assets/projectAssets/Max_The_Spider/

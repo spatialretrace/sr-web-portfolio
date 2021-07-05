@@ -16,7 +16,7 @@ class ProjectDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double detailFontSize = 16;
+    final double detailFontSize = 20;
     return Container(
       height: widgetHeight,
       width: widgetWidth,
@@ -24,8 +24,7 @@ class ProjectDetail extends StatelessWidget {
         child: Text.rich(
           TextSpan(children: [
             TextSpan(
-              text:
-                  'In this proposal, food truck design meets furniture design with the help of upcycled industrial debris such as metal sheets, rebars and PVC pipes. The stall\'s dynamic feature is the ',
+              text: 'Maximilian is designed as a ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
@@ -35,7 +34,7 @@ class ProjectDetail extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: 'pull-out stair shelf',
+              text: 'cyber-arachnid',
               style: TextStyle(
                 color: lightTextColor,
                 fontFamily: 'Futura',
@@ -46,7 +45,7 @@ class ProjectDetail extends StatelessWidget {
             ),
             TextSpan(
               text:
-                  ' that allows access to rooftop sleeping area covered by a convertible awning. It also helps store ingredients needed to sell the classic dish, the ',
+                  ' character inspired by the rugged and spiky aesthetics of the movie, ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
@@ -56,45 +55,34 @@ class ProjectDetail extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: 'baked potato.\n\n\n',
+              text: 'Mad Max',
               style: TextStyle(
                 color: lightTextColor,
                 fontFamily: 'Futura',
                 fontSize: detailFontSize,
-                fontWeight: FontWeight.bold,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text:
-                  'The stall\'s layout is optimized to suit the quick bodily motions of the vendor while working with ',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text: 'each ingredient within arm\'s reach.',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
                 fontStyle: FontStyle.italic,
                 height: 1.5,
               ),
             ),
             TextSpan(
               text:
-                  ' All electric appliances needed to sustain cooking and sleeping activities are powered by a compact generator-invertor.',
+                  '. This fusion features truck tires at the base of each metallic leg that is covered in a "million" spikes. \n\n\nDespite its appearance, Maximilian is an amicable spider that has wide eyes and and flashy lights on its body. The ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
                 fontSize: detailFontSize,
                 fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text:
+                  'color palette of the character is an homage to retro arcade games and hues of a Martian desert where Maximilian lives.',
+              style: TextStyle(
+                color: lightTextColor,
+                fontFamily: 'Futura',
+                fontSize: detailFontSize,
+                fontWeight: FontWeight.bold,
                 height: 1.5,
               ),
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Library/project_blog.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Library/project_brief.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Library/project_detail.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Museum/project_blog.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Museum/project_brief.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Museum/project_detail.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
 import 'package:my_landing_page/widgets/carousel_demo.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
@@ -15,7 +15,7 @@ import 'package:my_landing_page/widgets/web_BG.dart';
 
 List<Widget> list = [];
 
-class HybridMLibrary extends StatelessWidget {
+class HybridMuseum extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Color homeBGback = Colors.amber;
@@ -28,7 +28,7 @@ class HybridMLibrary extends StatelessWidget {
     Widget projectDetail;
     List<String> currentProjectName;
     for (var project in projects) {
-      if (project.projectName == 'HYBRID LIBRARY') {
+      if (project.projectName == 'HYBRID MUSEUM') {
         currentProject = project;
         projectBrief = ProjectBrief(
           widgetHeight: 0.4 * slideHeight,
@@ -40,8 +40,8 @@ class HybridMLibrary extends StatelessWidget {
         projectDetail = ProjectDetail(
           widgetHeight: 0.8 * slideHeight,
           widgetWidth: 0.4 * slideWidth,
-          darkTextColor: currentProject.color5,
-          lightTextColor: currentProject.color1,
+          darkTextColor: currentProject.color4,
+          lightTextColor: currentProject.color5,
         );
         debugPrint('${currentProject.projectName} HAS BEEN INITIALIZED!!!');
         currentProjectName = currentProject.projectName.split(' ');

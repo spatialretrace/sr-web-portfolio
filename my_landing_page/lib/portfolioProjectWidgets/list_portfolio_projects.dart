@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/CAD_Temple/cad_temple.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Library/hybrid_museum_library.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Museum/hybrid_museum.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Macchegaun_School/m_school.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/marilou_laundry.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Max_The_Spider/max_the_spider.dart';
@@ -67,7 +67,7 @@ final List<Project> projects = [
     ],
     year: 2020,
     place: 'Montreal, CANADA',
-    projectName: 'MACCHEGAUN SCHOOL',
+    projectName: 'MACHHEGAUN SCHOOL',
     blogWidget: MSchool(),
     projectRoute: '/macchegaun-school',
     color1: Color(0xFFD7E9ED),
@@ -121,12 +121,11 @@ final List<Project> projects = [
     color5: Color(0xFFFFFFFF),
   ),
   Project(
-    previewImage:
-        'assets/projectAssets/Hybrid_Library/preview_HybridLibrary.png',
-    hoverImage: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
-    slide2Image: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
-    slide3Image: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
-    slide4Image: 'assets/projectAssets/Hybrid_Library/hover_HybridLibrary.png',
+    previewImage: 'assets/projectAssets/Hybrid_Museum/preview_HybridMuseum.png',
+    hoverImage: 'assets/projectAssets/Hybrid_Museum/hover_HybridMuseum.png',
+    slide2Image: 'assets/projectAssets/Hybrid_Museum/hover_HybridMuseum.png',
+    slide3Image: 'assets/projectAssets/Hybrid_Museum/hover_HybridMuseum.png',
+    slide4Image: 'assets/projectAssets/Hybrid_Museum/hover_HybridMuseum.png',
     designCategory: [
       'Architecture',
       'Hybrid',
@@ -136,7 +135,7 @@ final List<Project> projects = [
     year: 2018,
     place: 'Abu Dhabi, UAE',
     projectName: 'HYBRID MUSEUM',
-    blogWidget: HybridMLibrary(),
+    blogWidget: HybridMuseum(),
     projectRoute: '/hybrid-museum',
     color1: Color(0xFFB5B7C3),
     color2: Color(0xFFE2CB99),

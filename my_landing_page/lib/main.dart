@@ -4,7 +4,7 @@ import 'package:my_landing_page/pages/01_work_page/work_page.dart';
 import 'package:my_landing_page/pages/00_landing_page/landing_page.dart';
 import 'package:my_landing_page/pages/03_contact_page/contact_page.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/CAD_Temple/cad_temple.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Library/hybrid_museum_library.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Museum/hybrid_museum.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Macchegaun_School/m_school.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/marilou_laundry.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Max_The_Spider/max_the_spider.dart';
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         '/work/cad-temple': (context) => CADTemple(),
         '/work/moonception': (context) => MoonCeption(),
         '/work/vendor-stall': (context) => MyVendorVan(),
-        '/work/hybrid-museum': (context) => HybridMLibrary(),
+        '/work/hybrid-museum': (context) => HybridMuseum(),
         '/work/marilu-laundry': (context) => MarilouLaundry(),
         '/work/macchegaun-school': (context) => MSchool(),
         '/work/max-the-spider': (context) => MaxTheSpider(),

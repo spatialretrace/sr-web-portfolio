@@ -26,8 +26,7 @@ class ProjectBrief extends StatelessWidget {
         child: Text.rich(
           TextSpan(children: [
             TextSpan(
-              text:
-                  'Confronting buidling material textures and attention to detail in cultural spaces such as the ',
+              text: 'Capturing the daunting presence of a ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
@@ -37,7 +36,7 @@ class ProjectBrief extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: 'Sensoji Temple, Tokyo',
+              text: 'gigantic spider',
               style: TextStyle(
                 color: lightTextColor,
                 fontFamily: 'Futura',
@@ -47,13 +46,62 @@ class ProjectBrief extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text:
-                  ' through a wooden puzzle generated from a neutral AutoCAD drawing.',
+              text: ' by transforming its body into a ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
                 fontSize: briefFontSize,
                 fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: 'Mad Max machina',
+              style: TextStyle(
+                color: darkTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
+                fontWeight: FontWeight.bold,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: ' in the dystopian illustration, ',
+              style: TextStyle(
+                color: darkTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
+                fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: 'Max The Spider',
+              style: TextStyle(
+                color: accentTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
+                fontStyle: FontStyle.italic,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: ', submitted for Winter 2021 call for artists at ',
+              style: TextStyle(
+                color: darkTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
+                fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: 'Collective Arts Brewery, Hamilton, Ontario.',
+              style: TextStyle(
+                color: lightTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
+                fontStyle: FontStyle.italic,
                 height: 1.5,
               ),
             ),
