@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/extensions/navigator_hover.dart';
 import 'package:my_landing_page/extensions/review_hover.dart';
 import 'dart:html' as html;
 import 'package:my_landing_page/extensions/tile_project_hover.dart';
@@ -23,6 +24,12 @@ extension HoverExtensions on Widget {
 
   Widget get reviewOnHover {
     return ReviewHover(
+      child: this,
+    );
+  }
+
+  Widget get navigatorOnHover {
+    return NavigatorHover(
       child: this,
     );
   }

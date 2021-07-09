@@ -44,6 +44,7 @@ class LandingPage extends StatelessWidget {
                   ),
                   onTap: () {
                     debugPrint("GO TO WORK PAGE!!");
+                    Navigator.pushNamed(context, '/work');
                   },
                 ),
               ),

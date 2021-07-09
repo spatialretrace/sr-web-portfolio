@@ -47,7 +47,7 @@ class HeaderSection extends StatelessWidget {
               ),
               onTap: () {
                 debugPrint("ROUTING BACK TO LANDING PAGE!!!");
-                Navigator.pushNamed(context, '/');
+                Navigator.pop(context, '/');
               },
             ),
           ),

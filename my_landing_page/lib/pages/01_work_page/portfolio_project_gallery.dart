@@ -20,6 +20,8 @@ class PortfolioProject extends StatefulWidget {
   _PortfolioProjectState createState() => _PortfolioProjectState();
 }
 
+bool _hovering = false;
+
 class _PortfolioProjectState extends State<PortfolioProject> {
   @override
   Widget build(BuildContext context) {
@@ -27,33 +29,55 @@ class _PortfolioProjectState extends State<PortfolioProject> {
     final double tileProjectDimension = (currentWorkWidth * 0.9) / 3;
     // final double currentWorkWidth = MediaQuery.of(context).size.width;
     // print(currentWorkWidth);
-    String projectImage = widget.previewImage;
+    // String projectImage = widget.previewImage;
     projectTitle.add(widget.projectName);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
-          height: 10,
+        Container(
+          height: 20,
+          child: _hovering
+              ? Text(
+                  widget.projectName,
+                  style: TextStyle(
+                    color: Colors.amber,
+                    fontFamily: 'Futura',
+                  ),
+                )
+              : Text(''),
         ),
-        Material(
-          color: Colors.transparent,
-          child: Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                image: AssetImage(projectImage),
-                fit: BoxFit.cover,
+        MouseRegion(
+          onEnter: (e) => _mouseEnter(true),
+          onExit: (e) => _mouseEnter(false),
+          child: Material(
+            color: Colors.transparent,
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 500),
+              alignment: Alignment.center,
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                  image: _hovering
+                      ? AssetImage(widget.hoverImage)
+                      : AssetImage(widget.previewImage),
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            width: tileProjectDimension,
-            height: tileProjectDimension,
-          ).tileProjectOnHover,
+              width: tileProjectDimension,
+              height: tileProjectDimension,
+            ).tileProjectOnHover,
+          ),
         )
       ],
     );
+  }
+
+  void _mouseEnter(bool hovering) {
+    setState(() {
+      _hovering = hovering;
+    });
   }
 }
 

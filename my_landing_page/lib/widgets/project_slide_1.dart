@@ -25,8 +25,6 @@ class ProjectSlide1 extends StatelessWidget {
       height: slideHeight,
       margin: EdgeInsets.only(
         top: 20,
-        right: 60,
-        left: 60,
       ),
       decoration: BoxDecoration(
         color: currentProject.color1,
@@ -39,7 +37,12 @@ class ProjectSlide1 extends StatelessWidget {
           //PROJECT SLIDER CONTENT
           Container(
         width: slideWidth,
-        margin: EdgeInsets.only(top: 30, right: 60, left: 60, bottom: 60),
+        margin: EdgeInsets.only(
+          top: 30,
+          right: 60,
+          left: 60,
+          bottom: 60,
+        ),
         child: Row(
           children: [
             //PROJECT PREVIEW IMAGE
