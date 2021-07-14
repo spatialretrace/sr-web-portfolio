@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BioText extends StatelessWidget {
   const BioText({
@@ -7,6 +8,8 @@ class BioText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double bioTextSize = 15;
+    String bioTextFontFamily = 'Futura';
     return Expanded(
       flex: 2,
       child: Container(
@@ -15,49 +18,97 @@ class BioText extends StatelessWidget {
         child: Text.rich(
           TextSpan(children: [
             TextSpan(
-              text: 'Lorem ipsum dolor ',
+              text: 'Hi, I\'m ',
               style: TextStyle(
                 color: Colors.white,
+                fontSize: bioTextSize,
+                fontFamily: bioTextFontFamily,
               ),
             ),
             TextSpan(
-              text: 'sit amet',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            TextSpan(
-              text:
-                  ', consectetur adipiscing elit. Mauris mollis massa ac lacus efficitur gravida. Sed dui neque, dictum et aliquam in, blandit eleifend arcu. Vivamus vestibulum porta risus, sit amet luctus mi consectetur ac. Vestibulum sit amet efficitur mi. Integer id volutpat tortor.',
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-            TextSpan(
-              text: 'Aliquam ',
+              text: 'Firdous Nizar',
               style: TextStyle(
                 color: Colors.amber,
-                fontStyle: FontStyle.italic,
-                fontSize: 20,
+                fontSize: bioTextSize,
+                fontFamily: bioTextFontFamily,
               ),
             ),
             TextSpan(
               text:
-                  'erat volutpat. Vivamus semper pharetra lacus, quis tempus nisl porta sed. Phasellus consequat sapien nec eros commodo aliquet. Praesent sed sem magna. Vivamus a lectus massa. Pellentesque pulvinar elit tellus, a convallis tellus venenatis sit amet.',
+                  ', designer, programmer, artist, blogger and writer with a background in architecture and urban design. Starting from proud scribbles on the walls of my parents\' apartment to enrolling for architecture to working with Web-based AR apps, my passion to translate a fleeting concept to a full-fledged narrative is what keeps me shifting and evolving my interdisciplinary skillset. I am well-known for gauging the extent of a problem and the emotions/likes/dislikes of my peers while also being brutally honest about all things good, moderate and bad about a project.',
               style: TextStyle(
                 color: Colors.white,
+                fontSize: bioTextSize,
+                fontFamily: bioTextFontFamily,
               ),
             ),
             TextSpan(
               text:
-                  'Proin volutpat arcu purus, nec mattis nulla pretium nec. Quisque facilisis hendrerit lacus id vestibulum. Sed sed lectus eget diam elementum rutrum ut in ligula. Vestibulum consequat ac purus vitae molestie. Mauris vel tellus magna. Maecenas fringilla ligula non dignissim tristique. Fusce id sodales odio, in cursus lorem. Nullam at egestas urna. Aenean ultricies sapien non feugiat aliquam.',
+                  '\n\nI work with Front-end development tools (HTML/CSS/JS), Flutter API, Unity3D, Adobe Creative Cloud (Photoshop, Illustrator, InDesign, Premier), Figma, Procreate, AutoCAD, Revit, SketchUp, ink sketch, mood board, paper/clay maquette, and more. My design process typically involves using Trello and/or Miro boards to communicate with collaborators at several phases of a project.',
               style: TextStyle(
                 color: Colors.white,
+                fontSize: bioTextSize,
+                fontFamily: bioTextFontFamily,
+              ),
+            ),
+            TextSpan(
+              text: '\n\nUpcoming Projects:\n',
+              style: TextStyle(
+                color: Colors.amber,
+                fontSize: bioTextSize,
+                fontFamily: bioTextFontFamily,
+              ),
+            ),
+            WidgetSpan(
+              child: FaIcon(
+                FontAwesomeIcons.handPointRight,
+                size: 16,
+                color: Colors.amber.shade600,
+              ),
+            ),
+            TextSpan(
+              text:
+                  ' Reimagining world architecture through Venice: research-creation presentation for Accelerate Knowledge of the Past to Tomorrow - Delta Maja Studio x Venice Biennale (summer school), 2021.\n\n',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: bioTextSize,
+                fontFamily: bioTextFontFamily,
+              ),
+            ),
+            WidgetSpan(
+              child: FaIcon(
+                FontAwesomeIcons.handPointRight,
+                size: 16,
+                color: Colors.amber.shade600,
+              ),
+            ),
+            TextSpan(
+              text:
+                  ' WeAR: hybrid materiality through wearable AR on t-shirts with hand-made embroidery, 2021.\n\n',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: bioTextSize,
+                fontFamily: bioTextFontFamily,
+              ),
+            ),
+            WidgetSpan(
+              child: FaIcon(
+                FontAwesomeIcons.handPointRight,
+                size: 16,
+                color: Colors.amber.shade600,
+              ),
+            ),
+            TextSpan(
+              text:
+                  ' CAMMM Web Atlas 0.1: web app to compare mobility in cities for CAMMM project at IDEAS-BE, 2021.',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: bioTextSize,
+                fontFamily: bioTextFontFamily,
               ),
             ),
           ]),
-          textAlign: TextAlign.justify,
+          textAlign: TextAlign.left,
         ),
       ),
     );

@@ -27,7 +27,7 @@ class _ReviewsState extends State<Reviews> {
           children: [
             //REVIEW LEFT ARROW BUTTON
             Container(
-              width: 0.08 * width,
+              width: 124,
               child: Container(
                 // margin: EdgeInsets.only(right: 10),
                 // color: Colors.white,
@@ -44,11 +44,11 @@ class _ReviewsState extends State<Reviews> {
             ),
             //REVIEW LIST SECTION
             ReviewList(
-              widgetWidth: 0.48 * width,
+              widgetWidth: 960,
             ),
             //REVIEW RIGHT ARROW BUTTON
             Container(
-              width: 0.08 * width,
+              width: 124,
               child: Container(
                 // color: Colors.white,
                 child: GestureDetector(
