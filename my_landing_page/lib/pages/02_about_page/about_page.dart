@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/widgets/back_home_button.dart';
 import 'package:my_landing_page/widgets/curve_n_face.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
 import 'package:my_landing_page/pages/02_about_page/intro_video_bio.dart';
@@ -12,7 +13,8 @@ class AboutPage extends StatelessWidget {
     final Color homeBGback = Colors.amber;
     final Color homeBGfront = Colors.black;
     final double width = MediaQuery.of(context).size.width;
-    final double height = MediaQuery.of(context).size.height;
+    final double height = 1160;
+    // MediaQuery.of(context).size.height;
     return Material(
       child: SingleChildScrollView(
         child: Stack(
@@ -20,7 +22,7 @@ class AboutPage extends StatelessWidget {
             WebBG(
               homeBGback: homeBGback,
               homeBGfront: homeBGfront,
-              pageHeight: height * 1.28,
+              pageHeight: height,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -31,12 +33,12 @@ class AboutPage extends StatelessWidget {
                     right: 50,
                     // bottom: 50,
                   ),
-                  height: height * 1.28,
+                  height: height,
                   child: Row(
                     children: [
                       //WEIRD CURVE AND FACE SECTION
                       CurveNFace(
-                        widgetWidth: 0.28 * width,
+                        widgetWidth: 400,
                       ),
                       //ABOUT CONTENT SECTION
                       Container(
@@ -60,11 +62,11 @@ class AboutPage extends StatelessWidget {
                               ),
                               //INTRO VIDEO & BIO SECTION
                               IntroVideoBio(
-                                widgetHeight: 0.6 * height,
+                                widgetHeight: 520,
                               ),
                               //REVIEWS SECTION
                               Reviews(
-                                widgetHeight: 0.25 * height,
+                                widgetHeight: 300,
                               ),
                               //FOOTER SECTION
                               FooterSection(),
@@ -80,24 +82,19 @@ class AboutPage extends StatelessWidget {
             Positioned(
               bottom: 0,
               left: 0,
-              child: GestureDetector(
-                onTap: () {
-                  debugPrint('TAKE ME BACK HOME!!!');
-                  Navigator.pop(context, '/');
-                },
-                child: Container(
-                  width: 420,
-                  height: 420,
-                  // color: Colors.amber,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/Firdous_Avatar.png'),
-                      fit: BoxFit.cover,
-                    ),
+              child: Container(
+                width: 420,
+                height: 420,
+                // color: Colors.amber,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/Firdous_Avatar.png'),
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
+            BackHomeButton(),
           ],
         ),
       ),

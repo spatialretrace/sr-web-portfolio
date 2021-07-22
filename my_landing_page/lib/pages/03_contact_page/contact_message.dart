@@ -1,4 +1,8 @@
+import 'dart:ui';
+
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactMessage extends StatelessWidget {
   const ContactMessage({
@@ -10,10 +14,12 @@ class ContactMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double columnWidth = 60;
+    double contactMessageFontSize = 20;
     // final double width = MediaQuery.of(context).size.width;
     return Container(
       height: widgetHeight,
       child: Container(
+        height: 500,
         child: Stack(
           children: [
             Container(
@@ -56,7 +62,7 @@ class ContactMessage extends StatelessWidget {
               children: [
                 Container(
                   child: Text(
-                    'Let\'s Design Together!',
+                    '\n\n\nLet\'s Design Together!',
                     style: TextStyle(
                       color: Colors.amber,
                       fontSize: 36,
@@ -68,19 +74,20 @@ class ContactMessage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.only(
                     top: 20,
-                    bottom: 20,
+                    // bottom: 20,
                     right: columnWidth + 20,
                     left: columnWidth + 20,
                   ),
+                  alignment: Alignment.center,
                   child: Text.rich(
                     TextSpan(
                       children: [
                         TextSpan(
                           text:
-                              'I’m always looking for amazing ideas and wonderful people to work with. Go ahead and drop me a message and I should get back to you within 2-3 business days.',
+                              '\n\nI’m always looking for amazing ideas and wonderful people to work with.',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: contactMessageFontSize,
                             fontFamily: 'Futura',
                             height: 1.5,
                           ),
@@ -90,7 +97,90 @@ class ContactMessage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(right: columnWidth),
+                  padding: EdgeInsets.only(
+                    // top: 20,
+                    // bottom: 20,
+                    right: columnWidth + 20,
+                    left: columnWidth + 20,
+                  ),
+                  alignment: Alignment.center,
+                  child: Text.rich(
+                    TextSpan(children: [
+                      TextSpan(
+                        text: '\n\n\nGo ahead and ',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: contactMessageFontSize,
+                          fontFamily: 'Futura',
+                          height: 1.5,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'drop me an email at ',
+                        style: TextStyle(
+                          color: Colors.amber,
+                          fontSize: contactMessageFontSize,
+                          fontFamily: 'Futura',
+                          height: 1.5,
+                          // decoration: TextDecoration.underline,
+                          // decorationThickness: 3,
+                        ),
+                      ),
+                      WidgetSpan(
+                        child: Icon(
+                          Icons.email_outlined,
+                          size: contactMessageFontSize,
+                          color: Colors.amber,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'ar.firdous.nizar@gmail.com',
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            launch('mailto:ar.firdous.nizar@gmail.com');
+                          },
+                        style: TextStyle(
+                          color: Colors.amber,
+                          fontSize: contactMessageFontSize,
+                          fontFamily: 'Futura',
+                          height: 1.5,
+                          decoration: TextDecoration.underline,
+                          // decorationThickness: 3,
+                        ),
+                      ),
+                      TextSpan(
+                        text:
+                            ' and \n\n             I will reach out to you within ',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: contactMessageFontSize,
+                          fontFamily: 'Futura',
+                          height: 1.5,
+                        ),
+                      ),
+                      TextSpan(
+                        text: '2-3',
+                        style: TextStyle(
+                          color: Colors.amber,
+                          fontSize: contactMessageFontSize,
+                          fontFamily: 'Futura',
+                          height: 1.5,
+                        ),
+                      ),
+                      TextSpan(
+                        text: ' business days.',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: contactMessageFontSize,
+                          fontFamily: 'Futura',
+                          height: 1.5,
+                        ),
+                      ),
+                    ]),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 20, right: columnWidth + 20),
                   child: Text(
                     'Talk soon!',
                     style: TextStyle(
@@ -105,7 +195,7 @@ class ContactMessage extends StatelessWidget {
                 Container(
                   width: 100,
                   height: 100,
-                  margin: EdgeInsets.only(right: columnWidth - 20),
+                  margin: EdgeInsets.only(right: columnWidth),
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       alignment: Alignment.bottomRight,

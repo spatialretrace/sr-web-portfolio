@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/widgets/avatar_home_button.dart';
 import 'package:my_landing_page/widgets/web_nav.dart';
 import 'package:flutter/rendering.dart';
 
@@ -25,32 +26,7 @@ class HeaderSection extends StatelessWidget {
           SizedBox(
             height: 50,
           ),
-          MouseRegion(
-            cursor: SystemMouseCursors.click,
-            child: GestureDetector(
-              child: Container(
-                // color: Colors.white,
-                width: 70,
-                height: 70,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 10,
-                    color: Colors.black,
-                    style: BorderStyle.solid,
-                  ),
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage('assets/Avatar.jpg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              onTap: () {
-                debugPrint("ROUTING BACK TO LANDING PAGE!!!");
-                Navigator.pop(context, '/');
-              },
-            ),
-          ),
+          AvatarHomeButton(),
           SizedBox(
             height: 30,
           ),

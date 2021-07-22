@@ -26,50 +26,64 @@ class IntroText extends StatelessWidget {
     return Container(
       // padding: EdgeInsets.only(left: 150),
       alignment: Alignment.bottomLeft,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Text(
-            'Hi, I\'m',
-            textAlign: TextAlign.left,
+      child: Text.rich(
+        TextSpan(children: [
+          TextSpan(
+            text: '\n\n\nHi, I\'m',
             style: TextStyle(
               color: textColor1,
-              fontFamily: fontFam,
-              fontWeight: fontWeight,
               fontSize: fontSize1,
-              letterSpacing: letterSpace,
-            ),
-          ),
-          SizedBox(
-            height: lineSpacing1,
-          ),
-          Text(
-            'Firdous',
-            textAlign: TextAlign.left,
-            style: TextStyle(
-              color: textColor2,
               fontFamily: fontFam,
               fontWeight: fontWeight,
-              fontSize: fontSize2,
               letterSpacing: letterSpace,
+              height: 1.5,
             ),
           ),
-          SizedBox(
-            height: lineSpacing2,
-          ),
-          Text(
-            'Nizar',
-            textAlign: TextAlign.left,
+          TextSpan(
+            text: '\nFirdous',
             style: TextStyle(
               color: textColor2,
+              fontSize: fontSize2,
               fontFamily: fontFam,
               fontWeight: fontWeight,
-              fontSize: fontSize2,
               letterSpacing: letterSpace,
+              height: 1.5,
             ),
           ),
-        ],
+          TextSpan(
+            text: '\nNizar',
+            style: TextStyle(
+              color: textColor2,
+              fontSize: fontSize2,
+              fontFamily: fontFam,
+              fontWeight: fontWeight,
+              letterSpacing: letterSpace,
+              height: 1,
+            ),
+          ),
+          TextSpan(
+            text: '\n\nand welcome to',
+            style: TextStyle(
+              color: textColor1,
+              fontSize: 26,
+              fontFamily: fontFam,
+              fontWeight: fontWeight,
+              // letterSpacing: letterSpace,
+              height: 1.5,
+            ),
+          ),
+          TextSpan(
+            text: '\nSpatial Retrace',
+            style: TextStyle(
+              color: textColor2,
+              fontSize: 38,
+              fontFamily: fontFam,
+              fontWeight: fontWeight,
+              letterSpacing: letterSpace,
+              height: 1.5,
+            ),
+          ),
+        ]),
       ),
     );
   }
