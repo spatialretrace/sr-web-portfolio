@@ -23,6 +23,7 @@ final List<Project> projects = [
     ],
     year: 2020,
     place: 'Montreal, CANADA',
+    hasBlog: false,
     projectName: 'RETRACER E-STUDIO',
     blogWidget: RetracerEStudio(),
     projectRoute: '/retracer-e-studio',
@@ -46,6 +47,7 @@ final List<Project> projects = [
     year: 2020,
     place: 'Montreal, CANADA',
     projectName: 'SPIDER MAXIMILLIAN',
+    hasBlog: false,
     blogWidget: MaxTheSpider(),
     projectRoute: '/max-the-spider',
     color1: Color(0xFF122C45),
@@ -68,6 +70,7 @@ final List<Project> projects = [
     year: 2021,
     place: 'Texas, USA',
     projectName: 'MISCHIEVOUS MARILU',
+    hasBlog: true,
     blogWidget: MarilouLaundry(),
     projectRoute: '/marilu-laundry',
     color1: Color(0xFFE6BA6B),
@@ -90,6 +93,7 @@ final List<Project> projects = [
     year: 2020,
     place: 'Montreal, CANADA',
     projectName: 'MACHHEGAUN SCHOOL',
+    hasBlog: false,
     blogWidget: MSchool(),
     projectRoute: '/macchegaun-school',
     color1: Color(0xFFD7E9ED),
@@ -111,6 +115,7 @@ final List<Project> projects = [
     ],
     year: 2019,
     place: 'Tokyo, JAPAN',
+    hasBlog: false,
     projectName: 'CAD TEMPLE',
     blogWidget: CADTemple(),
     projectRoute: '/cad-temple',
@@ -135,6 +140,7 @@ final List<Project> projects = [
     year: 2018,
     place: 'Abu Dhabi, UAE',
     projectName: 'HYBRID MUSEUM',
+    hasBlog: false,
     blogWidget: HybridMuseum(),
     projectRoute: '/hybrid-museum',
     color1: Color(0xFFB5B7C3),
@@ -157,6 +163,7 @@ final List<Project> projects = [
     year: 2016,
     place: 'Calicut, INDIA',
     projectName: 'VENDOR STALL',
+    hasBlog: false,
     blogWidget: MyVendorVan(),
     projectRoute: '/vendor-stall',
     color1: Color(0xFF0C89C2),
@@ -172,6 +179,7 @@ final List<Project> projects = [
   //   year: 2019,
   //   place: 'Montreal, CANADA',
   //   projectName: 'TOWARD MOONCEPTION',
+  //   hasBlog: false,
   //   blogWidget: MoonCeption(),
   //   projectRoute: '/moonception',
   //   color1: Color(0xFFB2BAA3),
@@ -193,6 +201,7 @@ class Project {
   final List<String> designCategory;
   final int year;
   final String place;
+  final bool hasBlog;
   final Widget blogWidget;
   final String projectRoute;
   final Color color1; //BG Color
@@ -211,6 +220,7 @@ class Project {
     @required this.designCategory,
     @required this.year,
     @required this.place,
+    @required this.hasBlog,
     @required this.blogWidget,
     @required this.projectRoute,
     @required this.color1,

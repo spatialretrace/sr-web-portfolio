@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_landing_page/widgets/back_home_button.dart';
 import 'package:my_landing_page/widgets/curve_n_face.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
-import 'package:my_landing_page/pages/02_about_page/intro_video_bio.dart';
-import 'package:my_landing_page/pages/02_about_page/reviews.dart';
+import 'package:my_landing_page/pages/03_about_page/intro_video_bio.dart';
+import 'package:my_landing_page/pages/03_about_page/reviews.dart';
 import 'package:my_landing_page/widgets/web_BG.dart';
 import 'package:my_landing_page/widgets/web_nav.dart';
 

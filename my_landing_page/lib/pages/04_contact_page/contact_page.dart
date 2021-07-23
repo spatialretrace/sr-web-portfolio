@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_landing_page/pages/03_contact_page/contact_form.dart';
-import 'package:my_landing_page/pages/03_contact_page/contact_message.dart';
+import 'package:my_landing_page/pages/04_contact_page/contact_form.dart';
+import 'package:my_landing_page/pages/04_contact_page/contact_message.dart';
 import 'package:my_landing_page/widgets/back_home_button.dart';
 import 'package:my_landing_page/widgets/curve_n_face.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';

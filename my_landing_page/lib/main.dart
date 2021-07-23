@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_landing_page/pages/02_about_page/about_page.dart';
+import 'package:my_landing_page/pages/02_blog_page/blog_page.dart';
+import 'package:my_landing_page/pages/03_about_page/about_page.dart';
 import 'package:my_landing_page/pages/01_work_page/work_page.dart';
 import 'package:my_landing_page/pages/00_landing_page/landing_page.dart';
-import 'package:my_landing_page/pages/03_contact_page/contact_page.dart';
+import 'package:my_landing_page/pages/04_contact_page/contact_page.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/CAD_Temple/cad_temple.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Museum/hybrid_museum.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Macchegaun_School/m_school.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/work/max-the-spider': (context) => MaxTheSpider(),
         '/work/retracer-e-studio': (context) => RetracerEStudio(),
         '/about': (context) => AboutPage(),
+        '/blog': (context) => BlogPage(),
         '/contact': (context) => ContactPage(),
       },
     );

@@ -64,6 +64,27 @@ class WebNav extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
+            debugPrint("ROUTING TO BLOG PAGE!!");
+            Navigator.pushNamed(context, '/blog');
+          },
+          child: Text(
+            'BLOG',
+            style: TextStyle(
+              color: navTextColor,
+              fontFamily: 'Futura',
+              fontWeight: FontWeight.w100,
+            ),
+          ),
+          style: TextButton.styleFrom(
+            shadowColor: Colors.black,
+            elevation: navTextElevation,
+          ),
+        ),
+        SizedBox(
+          width: navSpacing,
+        ),
+        TextButton(
+          onPressed: () {
             debugPrint("ROUTING TO CONTACT PAGE!!");
             Navigator.pushNamed(context, '/contact');
           },
