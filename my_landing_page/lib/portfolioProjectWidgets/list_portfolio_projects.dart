@@ -24,6 +24,8 @@ final List<Project> projects = [
     year: 2020,
     place: 'Montreal, CANADA',
     hasBlog: false,
+    blogName: '',
+    blogReadTime: ' min read',
     projectName: 'RETRACER E-STUDIO',
     blogWidget: RetracerEStudio(),
     projectRoute: '/retracer-e-studio',
@@ -48,6 +50,8 @@ final List<Project> projects = [
     place: 'Montreal, CANADA',
     projectName: 'SPIDER MAXIMILLIAN',
     hasBlog: false,
+    blogName: '',
+    blogReadTime: ' min read',
     blogWidget: MaxTheSpider(),
     projectRoute: '/max-the-spider',
     color1: Color(0xFF122C45),
@@ -71,6 +75,8 @@ final List<Project> projects = [
     place: 'Texas, USA',
     projectName: 'MISCHIEVOUS MARILU',
     hasBlog: true,
+    blogName: 'Illustrating a children’s book in a pandemic freelance',
+    blogReadTime: '2 min read',
     blogWidget: MarilouLaundry(),
     projectRoute: '/marilu-laundry',
     color1: Color(0xFFE6BA6B),
@@ -94,6 +100,8 @@ final List<Project> projects = [
     place: 'Montreal, CANADA',
     projectName: 'MACHHEGAUN SCHOOL',
     hasBlog: false,
+    blogName: '',
+    blogReadTime: ' min read',
     blogWidget: MSchool(),
     projectRoute: '/macchegaun-school',
     color1: Color(0xFFD7E9ED),
@@ -115,7 +123,9 @@ final List<Project> projects = [
     ],
     year: 2019,
     place: 'Tokyo, JAPAN',
-    hasBlog: false,
+    hasBlog: true,
+    blogName: 'Sacred physicality in AutoCAD?',
+    blogReadTime: '3 min read',
     projectName: 'CAD TEMPLE',
     blogWidget: CADTemple(),
     projectRoute: '/cad-temple',
@@ -141,6 +151,8 @@ final List<Project> projects = [
     place: 'Abu Dhabi, UAE',
     projectName: 'HYBRID MUSEUM',
     hasBlog: false,
+    blogName: '',
+    blogReadTime: ' min read',
     blogWidget: HybridMuseum(),
     projectRoute: '/hybrid-museum',
     color1: Color(0xFFB5B7C3),
@@ -164,6 +176,8 @@ final List<Project> projects = [
     place: 'Calicut, INDIA',
     projectName: 'VENDOR STALL',
     hasBlog: false,
+    blogName: '',
+    blogReadTime: ' min read',
     blogWidget: MyVendorVan(),
     projectRoute: '/vendor-stall',
     color1: Color(0xFF0C89C2),
@@ -180,6 +194,8 @@ final List<Project> projects = [
   //   place: 'Montreal, CANADA',
   //   projectName: 'TOWARD MOONCEPTION',
   //   hasBlog: false,
+  //   blogName: '',
+  //   blogReadTime: ' min read',
   //   blogWidget: MoonCeption(),
   //   projectRoute: '/moonception',
   //   color1: Color(0xFFB2BAA3),
@@ -203,6 +219,8 @@ class Project {
   final String place;
   final bool hasBlog;
   final Widget blogWidget;
+  final String blogName;
+  final String blogReadTime;
   final String projectRoute;
   final Color color1; //BG Color
   final Color color2; //Light Color
@@ -221,6 +239,8 @@ class Project {
     @required this.year,
     @required this.place,
     @required this.hasBlog,
+    @required this.blogName,
+    @required this.blogReadTime,
     @required this.blogWidget,
     @required this.projectRoute,
     @required this.color1,

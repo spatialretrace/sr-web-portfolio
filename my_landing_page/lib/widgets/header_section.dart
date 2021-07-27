@@ -6,7 +6,10 @@ import 'package:flutter/rendering.dart';
 class HeaderSection extends StatelessWidget {
   const HeaderSection({
     Key key,
+    @required this.currentPage,
   }) : super(key: key);
+
+  final String currentPage;
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +38,7 @@ class HeaderSection extends StatelessWidget {
             navTextColor: Colors.white,
             navTextElevation: 3.0,
             navSpacing: 80,
+            currentPage: currentPage,
           ),
           SizedBox(
             height: 50,

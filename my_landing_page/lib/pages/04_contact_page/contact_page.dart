@@ -56,6 +56,7 @@ class ContactPage extends StatelessWidget {
                                 navTextColor: Colors.white,
                                 navTextElevation: 3.0,
                                 navSpacing: 80,
+                                currentPage: 'CONTACT',
                               ),
                               SizedBox(
                                 height: 50,

@@ -56,6 +56,7 @@ class AboutPage extends StatelessWidget {
                                 navTextColor: Colors.white,
                                 navTextElevation: 3.0,
                                 navSpacing: 80,
+                                currentPage: 'ABOUT',
                               ),
                               SizedBox(
                                 height: 50,

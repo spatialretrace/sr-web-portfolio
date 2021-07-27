@@ -25,6 +25,7 @@ class HiIntro extends StatelessWidget {
                 navTextColor: Colors.white,
                 navTextElevation: 3.0,
                 navSpacing: 40,
+                currentPage: 'LANDING',
               ),
             ),
           ),

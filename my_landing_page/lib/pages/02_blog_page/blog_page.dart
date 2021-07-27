@@ -1,9 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
+import 'package:my_landing_page/widgets/blog_preview_tile.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
 import 'package:my_landing_page/widgets/header_section.dart';
-import 'package:my_landing_page/widgets/nav_portfolio.dart';
+// import 'package:my_landing_page/widgets/nav_portfolio.dart';
 import 'package:my_landing_page/widgets/web_BG.dart';
+import 'package:my_landing_page/extensions/hover_extensions.dart';
+
+class BlogProject {
+  String projectName;
+  String avatarImage;
+  String blogURL;
+  String blogName;
+  String blogReadTime;
+  Color projectPrimaryColor;
+  Color projectSecondaryColor;
+  Color projectTertiaryColor;
+
+  BlogProject({
+    @required this.projectName,
+    @required this.avatarImage,
+    @required this.blogURL,
+    @required this.blogName,
+    @required this.blogReadTime,
+    @required this.projectPrimaryColor,
+    @required this.projectSecondaryColor,
+    @required this.projectTertiaryColor,
+  });
+}
 
 class BlogPage extends StatelessWidget {
   @override
@@ -12,9 +36,23 @@ class BlogPage extends StatelessWidget {
     final Color homeBGfront = Colors.black;
     final double width = MediaQuery.of(context).size.width;
     // final double height = MediaQuery.of(context).size.height;
-    List<String> projectsWithBlogs = [];
+    List<BlogProject> projectsWithBlogs = [];
     for (int i = 0; i < projects.length; i++) {
-      if (projects[i].hasBlog) projectsWithBlogs.add(projects[i].previewImage);
+      if (projects[i].hasBlog) {
+        BlogProject tempProject = BlogProject(
+          projectName: projects[i].projectName,
+          avatarImage: projects[i].previewImage,
+          blogURL: '/work' +
+              projects[i]
+                  .projectRoute, //NEED TO ADD SPECIFIC SECTION NAVIGATION
+          blogName: projects[i].blogName,
+          blogReadTime: projects[i].blogReadTime,
+          projectPrimaryColor: projects[i].color2,
+          projectSecondaryColor: projects[i].color3,
+          projectTertiaryColor: projects[i].color1,
+        );
+        projectsWithBlogs.add(tempProject);
+      }
     }
     return Material(
       child: SingleChildScrollView(
@@ -29,7 +67,9 @@ class BlogPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 //HEADER SECTION
-                HeaderSection(),
+                HeaderSection(
+                  currentPage: 'BLOG',
+                ),
                 SizedBox(
                   height: 50,
                 ),
@@ -40,28 +80,15 @@ class BlogPage extends StatelessWidget {
                   child: GridView.builder(
                     itemCount: projectsWithBlogs.length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
+                      crossAxisCount: 2,
+                      childAspectRatio: (640 / 360),
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
                     ),
                     itemBuilder: (context, index) {
-                      return RawMaterialButton(
-                        onPressed: () {
-                          debugPrint('LET\'S CHECK OUT THE BLOG FOR ${projectsWithBlogs[index]}');
-                          projectsWithBlogs[index]Navigator.pushNamed(context, )
-                        },
-                        child: Container(
-                          width: 400,
-                          height: 400,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(projectsWithBlogs[index]),
-                              fit: BoxFit.fitHeight,
-                            ),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      );
+                      return BlogPreviewTile(
+                        projectBlog: projectsWithBlogs[index],
+                      ).reviewOnHover;
                     },
                   ),
                 ),

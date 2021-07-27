@@ -85,7 +85,9 @@ class MoonCeption extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 //HEADER SECTION
-                HeaderSection(),
+                HeaderSection(
+                  currentPage: 'WORK',
+                ),
                 //PORTFOLIO PROJECT NAVIGATOR
                 NavPortfolio(width: width),
                 SizedBox(
