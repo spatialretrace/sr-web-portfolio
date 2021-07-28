@@ -3,33 +3,43 @@ import 'package:my_landing_page/extensions/hover_extensions.dart';
 
 final List<ReviewItem> reviews = [
   ReviewItem(
-    reviewAvatar: ReviewAvatar(),
-    reviewText: 'She\'s awesome!!',
-    reviewerName: 'Dr. John Doe',
-    reviewerDesignation: 'Doctor',
-    reviewerPlace: 'Earth',
+    reviewAvatar: ReviewAvatar(
+      avatarImage: 'assets/MohAvatar.jpg',
+    ),
+    reviewText:
+        'Firdous is more than a colleague, she is a good friend. I have been working with her for 2 years in a wide range of research, design, and teaching activities led by the IDEAS-BE research lab. I always enjoy working, brainstorming, and discussing with her. She is truly well-organized and creative at the same time.',
+    reviewerName: 'Mohammad Abdalreza Zadeh',
+    reviewerDesignation: 'INDI PhD Student',
+    reviewerPlace: 'Montreal, CANADA',
   ),
   ReviewItem(
-    reviewAvatar: ReviewAvatar(),
-    reviewText: 'She\'s awesome!!',
-    reviewerName: 'Dr. John Doe',
-    reviewerDesignation: 'Doctor',
-    reviewerPlace: 'Earth',
+    reviewAvatar: ReviewAvatar(
+      avatarImage: 'assets/NeethiAvatar.jpg',
+    ),
+    reviewText:
+        'It was a pleasure to work with Firdous. She collaborated with Team Folksnfables to create wonderful illustrations for a children’s book named “Marilu does her Laundry”. In addition to being professional, creative and timely, I love her dedication to contribute the best of her skills for the project.',
+    reviewerName: 'Neethi Joseph',
+    reviewerDesignation: 'Co-founder @FolksnFables',
+    reviewerPlace: 'Texas, USA',
   ),
-  ReviewItem(
-    reviewAvatar: ReviewAvatar(),
-    reviewText: 'She\'s awesome!!',
-    reviewerName: 'Dr. John Doe',
-    reviewerDesignation: 'Doctor',
-    reviewerPlace: 'Earth',
-  ),
-  ReviewItem(
-    reviewAvatar: ReviewAvatar(),
-    reviewText: 'She\'s awesome!!',
-    reviewerName: 'Dr. John Doe',
-    reviewerDesignation: 'Doctor',
-    reviewerPlace: 'Earth',
-  ),
+  // ReviewItem(
+  //   reviewAvatar: ReviewAvatar(
+  //     avatarImage: 'assets/Avatar.jpg',
+  //   ),
+  //   reviewText: 'She\'s awesome!!',
+  //   reviewerName: 'Dr. John Doe',
+  //   reviewerDesignation: 'Doctor',
+  //   reviewerPlace: 'Earth',
+  // ),
+  // ReviewItem(
+  //   reviewAvatar: ReviewAvatar(
+  //     avatarImage: 'assets/Avatar.jpg',
+  //   ),
+  //   reviewText: 'She\'s awesome!!',
+  //   reviewerName: 'Dr. John Doe',
+  //   reviewerDesignation: 'Doctor',
+  //   reviewerPlace: 'Earth',
+  // ),
 ];
 
 class ReviewList extends StatelessWidget {
@@ -41,6 +51,7 @@ class ReviewList extends StatelessWidget {
   final double widgetWidth;
   @override
   Widget build(BuildContext context) {
+    ScrollController reviewScroller = ScrollController();
     return Container(
       width: widgetWidth,
       child: Container(
@@ -48,7 +59,7 @@ class ReviewList extends StatelessWidget {
         // color: Colors.white,
         child: ListView(
           scrollDirection: Axis.horizontal,
-          // controller: ScrollController(). NEED TO WORK ON THIS!!
+          controller: reviewScroller,
           children: [
             for (var review in reviews) review.reviewOnHover,
           ],
@@ -75,18 +86,18 @@ class ReviewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double reviewListWidth = 200;
+    final double reviewListWidth = 400;
     final double height = MediaQuery.of(context).size.height * 0.2;
     return Container(
       width: reviewListWidth,
       child: Row(
         children: [
           Container(
-            width: 0.4 * reviewListWidth,
+            width: 0.3 * reviewListWidth,
             child: reviewAvatar,
           ),
           Container(
-            width: 0.5 * reviewListWidth,
+            width: 0.6 * reviewListWidth,
             child: Container(
               margin: EdgeInsets.only(left: 10),
               child: Column(
@@ -96,23 +107,25 @@ class ReviewItem extends StatelessWidget {
                     height: 50,
                   ),
                   Container(
-                    height: 0.4 * height,
+                    height: 0.8 * height,
                     child: Text(
                       reviewText,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 14,
+                        height: 1.15,
                       ),
                     ),
                   ),
                   Container(
-                    height: 0.2 * height,
+                    height: 0.1 * height,
                     child: Text(
                       reviewerName,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.amber,
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
+                        height: 1.5,
                       ),
                     ),
                   ),
@@ -121,8 +134,9 @@ class ReviewItem extends StatelessWidget {
                     child: Text(
                       reviewerDesignation,
                       style: TextStyle(
-                        color: Colors.amber,
-                        fontSize: 10,
+                        color: Colors.white,
+                        fontSize: 12,
+                        height: 1.5,
                       ),
                     ),
                   ),
@@ -131,9 +145,10 @@ class ReviewItem extends StatelessWidget {
                     child: Text(
                       reviewerPlace,
                       style: TextStyle(
-                        color: Colors.amber,
+                        color: Colors.white,
                         fontSize: 10,
                         fontStyle: FontStyle.italic,
+                        height: 1.5,
                       ),
                     ),
                   ),
@@ -148,7 +163,9 @@ class ReviewItem extends StatelessWidget {
 }
 
 class ReviewAvatar extends StatelessWidget {
-  const ReviewAvatar({Key key}) : super(key: key);
+  const ReviewAvatar({Key key, @required this.avatarImage}) : super(key: key);
+
+  final String avatarImage;
 
   @override
   Widget build(BuildContext context) {
@@ -162,7 +179,7 @@ class ReviewAvatar extends StatelessWidget {
         ),
         // color: Colors.white,
         image: DecorationImage(
-          image: AssetImage('assets/Avatar.jpg'),
+          image: AssetImage(avatarImage),
           fit: BoxFit.contain,
         ),
       ),

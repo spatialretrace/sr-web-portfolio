@@ -79,8 +79,10 @@ flutter:
       fonts:
         - asset: assets/futur.ttf
           weight: 900
-        # - asset: assets/Futura Bold font.ttf
-          # style: bold
+        - asset: assets/FuturaBoldfont.ttf
+          weight: 700
+        - asset: assets/FuturaCondensedRegular.ttf
+          weight: 400
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

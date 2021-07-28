@@ -23,7 +23,7 @@ class IntroVideoBio extends StatelessWidget {
             // IntroVideo(), //TODO NEED TO ATTACH FIRST DRAFT OF INTRO VIDEO
             //ABOUT PHOTO (PLACEHOLDER FOR INTRO VIDEO)
             Container(
-              width: 680,
+              width: 640,
               margin: EdgeInsets.only(right: 20),
               decoration: BoxDecoration(
                 image: DecorationImage(

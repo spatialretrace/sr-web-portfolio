@@ -18,18 +18,31 @@ class FooterSection extends StatelessWidget {
           style: TextStyle(
             color: Colors.white,
             fontFamily: 'Futura',
-            fontWeight: FontWeight.w200,
+            fontWeight: FontWeight.w600,
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 10,
+        ),
+        Text(
+          'BUILT WITH FLUTTER', //LINK TO FLUTTER SITE
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Futura',
+            fontWeight: FontWeight.w600,
+            fontSize: 12,
+          ),
+        ),
+        SizedBox(
+          height: 10,
         ),
         Text(
           'SPATIAL RETRACE, 2021',
           style: TextStyle(
             color: Colors.white,
             fontFamily: 'Futura',
-            fontWeight: FontWeight.w200,
+            fontWeight: FontWeight.w600,
+            fontSize: 12,
           ),
         ),
         SizedBox(

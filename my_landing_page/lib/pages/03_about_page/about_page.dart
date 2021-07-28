@@ -80,21 +80,21 @@ class AboutPage extends StatelessWidget {
                 ),
               ],
             ),
-            Positioned(
-              bottom: 0,
-              left: 0,
-              child: Container(
-                width: 420,
-                height: 420,
-                // color: Colors.amber,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/Firdous_Avatar.png'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
+            // Positioned(
+            //   bottom: 0,
+            //   left: 0,
+            //   child: Container(
+            //     width: 420,
+            //     height: 420,
+            //     // color: Colors.amber,
+            //     decoration: BoxDecoration(
+            //       image: DecorationImage(
+            //         image: AssetImage('assets/Firdous_Avatar.png'),
+            //         fit: BoxFit.cover,
+            //       ),
+            //     ),
+            //   ),
+            // ),
             BackHomeButton(),
           ],
         ),

@@ -35,7 +35,7 @@ class ProjectCategories extends StatelessWidget {
                   color: categoryColor,
                   fontFamily: 'Futura',
                   fontSize: 24,
-                  fontWeight: FontWeight.w100,
+                  fontWeight: FontWeight.w300,
                 ),
               )
           ]),

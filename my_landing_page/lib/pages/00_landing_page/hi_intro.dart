@@ -40,7 +40,7 @@ class HiIntro extends StatelessWidget {
                 lineSpacing2: 10,
                 fontSize1: width < 1280 ? 30 : width * 0.02,
                 fontSize2: 64,
-                fontWeight: FontWeight.w100,
+                fontWeight: FontWeight.w600,
                 letterSpace: 2),
           ),
           Container(

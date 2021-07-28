@@ -8,14 +8,15 @@ class BioText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double bioTextSize = 15;
+    double bioTextSize = 17;
     String bioTextFontFamily = 'Futura';
+    FontWeight bioTextFontWeight = FontWeight.w300;
     final ScrollController scrollController = ScrollController();
     return Expanded(
       flex: 2,
       child: Container(
         alignment: Alignment.topLeft,
-        height: 600,
+        height: 640,
         // color: Colors.white,
         child: RawScrollbar(
           controller: scrollController,
@@ -34,6 +35,7 @@ class BioText extends StatelessWidget {
                     color: Colors.white,
                     fontSize: bioTextSize,
                     fontFamily: bioTextFontFamily,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
                 TextSpan(
@@ -42,15 +44,27 @@ class BioText extends StatelessWidget {
                     color: Colors.amber,
                     fontSize: bioTextSize,
                     fontFamily: bioTextFontFamily,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
                 TextSpan(
                   text:
-                      ', designer, programmer, artist, blogger and writer with a background in architecture and urban design. Starting from proud scribbles on the walls of my parents\' apartment to enrolling for architecture to working with Web-based AR apps, my passion to translate a fleeting concept to a full-fledged narrative is what keeps me shifting and evolving my interdisciplinary skillset. I am well-known for gauging the extent of a problem and the emotions/likes/dislikes of my peers while also being brutally honest about all things good, moderate and bad about a project.',
+                      ', designer, programmer, artist, blogger and writer with a background in architecture and urban design. ',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: bioTextSize,
                     fontFamily: bioTextFontFamily,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                TextSpan(
+                  text:
+                      'Starting from proud scribbles on the walls of my parents\' apartment to enrolling for architecture to working with Web-based AR apps, my passion to translate a fleeting concept to a full-fledged narrative is what keeps me shifting and evolving my interdisciplinary skillset. I am well-known for gauging the extent of a problem and the emotions/likes/dislikes of my peers while also being brutally honest about all things good, moderate and bad about a project.',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: bioTextSize,
+                    fontFamily: bioTextFontFamily,
+                    fontWeight: bioTextFontWeight,
                   ),
                 ),
                 TextSpan(
@@ -60,6 +74,7 @@ class BioText extends StatelessWidget {
                     color: Colors.white,
                     fontSize: bioTextSize,
                     fontFamily: bioTextFontFamily,
+                    fontWeight: bioTextFontWeight,
                   ),
                 ),
                 TextSpan(
@@ -68,6 +83,7 @@ class BioText extends StatelessWidget {
                     color: Colors.amber,
                     fontSize: bioTextSize,
                     fontFamily: bioTextFontFamily,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
                 WidgetSpan(
@@ -78,12 +94,22 @@ class BioText extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text:
-                      ' Reimagining world architecture through Venice: research-creation presentation for Accelerate Knowledge of the Past to Tomorrow - Delta Maja Studio x Venice Biennale (summer school), 2021.\n\n',
+                  text: ' Reimagining world architecture through Venice',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: bioTextSize,
                     fontFamily: bioTextFontFamily,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                TextSpan(
+                  text:
+                      ': research-creation presentation for Accelerate Knowledge of the Past to Tomorrow - Delta Maja Studio x Venice Biennale (summer school), 2021.\n\n',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: bioTextSize,
+                    fontFamily: bioTextFontFamily,
+                    fontWeight: bioTextFontWeight,
                   ),
                 ),
                 WidgetSpan(
@@ -94,12 +120,22 @@ class BioText extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text:
-                      ' WeAR: hybrid materiality through wearable AR on t-shirts with hand-made embroidery, 2021.\n\n',
+                  text: ' WeAR',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: bioTextSize,
                     fontFamily: bioTextFontFamily,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                TextSpan(
+                  text:
+                      ': hybrid materiality through wearable AR on t-shirts with hand-made embroidery, 2021.\n\n',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: bioTextSize,
+                    fontFamily: bioTextFontFamily,
+                    fontWeight: bioTextFontWeight,
                   ),
                 ),
                 WidgetSpan(
@@ -110,12 +146,22 @@ class BioText extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text:
-                      ' CAMMM Web Atlas 0.1: web app to compare mobility in cities for CAMMM project at IDEAS-BE, 2021.',
+                  text: ' CAMMM Web Atlas 0.1',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: bioTextSize,
                     fontFamily: bioTextFontFamily,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                TextSpan(
+                  text:
+                      ': web app to compare mobility in cities for CAMMM project at IDEAS-BE, 2021.',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: bioTextSize,
+                    fontFamily: bioTextFontFamily,
+                    fontWeight: bioTextFontWeight,
                   ),
                 ),
               ]),

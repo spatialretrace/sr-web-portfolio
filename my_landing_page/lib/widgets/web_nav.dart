@@ -86,7 +86,7 @@ class NavItemButton extends StatelessWidget {
           color:
               currentPage == navItemName ? Colors.amber : widget.navTextColor,
           fontFamily: 'Futura',
-          fontWeight: FontWeight.w200,
+          fontWeight: FontWeight.w800,
           fontSize: currentPage == navItemName ? 16 : 14,
         ),
       ),
