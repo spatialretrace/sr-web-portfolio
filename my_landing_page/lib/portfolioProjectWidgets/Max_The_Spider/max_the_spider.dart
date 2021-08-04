@@ -79,7 +79,7 @@ class MaxTheSpider extends StatelessWidget {
             WebBG(
               homeBGback: homeBGback,
               homeBGfront: homeBGfront,
-              pageHeight: width * 1.25,
+              pageHeight: 1480,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,

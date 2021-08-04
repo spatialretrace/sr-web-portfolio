@@ -1,7 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/pages/00_landing_page/intro_text.dart';
 import 'package:my_landing_page/widgets/social_media.dart';
 import 'package:my_landing_page/widgets/web_nav.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HiIntro extends StatelessWidget {
   const HiIntro({
@@ -12,6 +14,7 @@ class HiIntro extends StatelessWidget {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
+    double photoRightsFontSize = 18;
     return Container(
       child: Column(
         children: [
@@ -57,12 +60,40 @@ class HiIntro extends StatelessWidget {
           Container(
             alignment: Alignment.bottomLeft,
             // padding: EdgeInsets.all(10),
-            child: Text('© 2021, Built with Flutter',
+            child: Text.rich(TextSpan(children: [
+              TextSpan(
+                text: '\u00a9 Photo by ',
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                )),
+                  color: Colors.black,
+                  fontFamily: 'Futura',
+                  fontWeight: FontWeight.w100,
+                  fontSize: photoRightsFontSize,
+                ),
+              ),
+              TextSpan(
+                text: 'Anna Minzhulina',
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    launch('https://www.annaminzhulina.com/about');
+                  },
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'Futura',
+                  fontWeight: FontWeight.w100,
+                  fontSize: photoRightsFontSize,
+                  decoration: TextDecoration.underline,
+                ),
+              ),
+              TextSpan(
+                text: ', 2021',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'Futura',
+                  fontSize: photoRightsFontSize,
+                  fontWeight: FontWeight.w100,
+                ),
+              ),
+            ])),
           )
         ],
       ),

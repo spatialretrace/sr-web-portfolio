@@ -16,7 +16,7 @@ class ProjectDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double detailFontSize = 16;
+    final double detailFontSize = 22;
     return Container(
       height: widgetHeight,
       width: widgetWidth,
@@ -24,8 +24,7 @@ class ProjectDetail extends StatelessWidget {
         child: Text.rich(
           TextSpan(children: [
             TextSpan(
-              text:
-                  'In this proposal, food truck design meets furniture design with the help of upcycled industrial debris such as metal sheets, rebars and PVC pipes. The stall\'s dynamic feature is the ',
+              text: 'Set in a ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
@@ -35,18 +34,18 @@ class ProjectDetail extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: 'pull-out stair shelf',
+              text: 'Puerto Rican household of 5 daughters and a mother',
               style: TextStyle(
                 color: lightTextColor,
                 fontFamily: 'Futura',
                 fontSize: detailFontSize,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w600,
                 height: 1.5,
               ),
             ),
             TextSpan(
               text:
-                  ' that allows access to rooftop sleeping area covered by a convertible awning. It also helps store ingredients needed to sell the classic dish, the ',
+                  ', this children\'s book is a heartwarming and playful story of the youngest child in the family who always tries to help in vain. The character\'s design calls for bright colors in her outfit with a flower in her thick and curly hair to ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
@@ -56,40 +55,19 @@ class ProjectDetail extends StatelessWidget {
               ),
             ),
             TextSpan(
-              text: 'baked potato.\n\n\n',
+              text:
+                  'capture her innocence and to make her stand out as the mischievous and pampered sibling.',
               style: TextStyle(
                 color: lightTextColor,
                 fontFamily: 'Futura',
                 fontSize: detailFontSize,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w600,
                 height: 1.5,
               ),
             ),
             TextSpan(
               text:
-                  'The stall\'s layout is optimized to suit the quick bodily motions of the vendor while working with ',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text: 'each ingredient within arm\'s reach.',
-              style: TextStyle(
-                color: darkTextColor,
-                fontFamily: 'Futura',
-                fontSize: detailFontSize,
-                fontWeight: FontWeight.w100,
-                fontStyle: FontStyle.italic,
-                height: 1.5,
-              ),
-            ),
-            TextSpan(
-              text:
-                  ' All electric appliances needed to sustain cooking and sleeping activities are powered by a compact generator-invertor.',
+                  ' The laundry room is illustrated with complementary colors and subtle textures in contrast with Marilu as she interacts with each object in the scene.',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',

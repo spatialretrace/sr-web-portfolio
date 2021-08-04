@@ -48,14 +48,28 @@ class ProjectSlide1 extends StatelessWidget {
             //PROJECT PREVIEW IMAGE
             Container(
               width: 0.55 * slideWidth,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  image: DecorationImage(
-                      image: AssetImage(currentProject.previewImage),
-                      fit: BoxFit.fitHeight),
+              child: Stack(children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(
+                        image: AssetImage(currentProject.previewImage),
+                        fit: BoxFit.fitHeight),
+                  ),
                 ),
-              ),
+                Positioned(
+                  bottom: 10,
+                  right: 10,
+                  child: Text(
+                    '\u00a9 ${currentProject.imageCopyRight}, 2021',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Futura',
+                      fontWeight: FontWeight.w100,
+                    ),
+                  ),
+                )
+              ]),
             ),
             SizedBox(
               width: 30,

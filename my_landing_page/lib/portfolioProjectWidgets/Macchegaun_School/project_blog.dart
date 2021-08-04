@@ -17,7 +17,9 @@ class ProjectBlog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: blogHeight,
+        height: 200,
+        // blogHeight,
+        alignment: Alignment.center,
         width: blogWidth,
         margin: EdgeInsets.symmetric(horizontal: 100),
         // width: 1080,

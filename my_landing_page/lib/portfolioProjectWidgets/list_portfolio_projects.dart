@@ -15,6 +15,7 @@ final List<Project> projects = [
     slide2Image: 'assets/projectAssets/Retracer/hover_Retracer.png',
     slide3Image: 'assets/projectAssets/Retracer/hover_Retracer.png',
     slide4Image: 'assets/projectAssets/Retracer/hover_Retracer.png',
+    imageCopyRight: 'Firdous Nizar',
     designCategory: [
       'Hybrid Application',
       'Architecture',
@@ -42,6 +43,7 @@ final List<Project> projects = [
     slide2Image: 'assets/projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
     slide3Image: 'assets/projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
     slide4Image: 'assets/projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
+    imageCopyRight: 'Firdous Nizar',
     designCategory: [
       'Illustration',
       'Surreal',
@@ -66,6 +68,7 @@ final List<Project> projects = [
     slide2Image: 'assets/projectAssets/Marilou/hover_Marilou.jpeg',
     slide3Image: 'assets/projectAssets/Marilou/slide3.png',
     slide4Image: 'assets/projectAssets/Marilou/slide4.gif',
+    imageCopyRight: 'FolksnFables',
     designCategory: [
       'Illustration',
       'Children\'s Book',
@@ -91,6 +94,7 @@ final List<Project> projects = [
     slide2Image: 'assets/projectAssets/Macchegaun_School/hover_MSchool.png',
     slide3Image: 'assets/projectAssets/Macchegaun_School/hover_MSchool.png',
     slide4Image: 'assets/projectAssets/Macchegaun_School/hover_MSchool.png',
+    imageCopyRight: 'Firdous Nizar',
     designCategory: [
       'Disaster Rehabilitation',
       'Vernacular Architecture',
@@ -116,6 +120,7 @@ final List<Project> projects = [
     slide2Image: 'assets/projectAssets/CAD_Temple/CADTemple_Slide2.jpg',
     slide3Image: 'assets/projectAssets/CAD_Temple/hover_CADTemple.jpeg',
     slide4Image: 'assets/projectAssets/CAD_Temple/CADTemple_Slide4.png',
+    imageCopyRight: 'Firdous Nizar',
     designCategory: [
       'Puzzle Design',
       'Hybrid',
@@ -141,6 +146,7 @@ final List<Project> projects = [
     slide2Image: 'assets/projectAssets/Hybrid_Museum/hover_HybridMuseum.png',
     slide3Image: 'assets/projectAssets/Hybrid_Museum/hover_HybridMuseum.png',
     slide4Image: 'assets/projectAssets/Hybrid_Museum/hover_HybridMuseum.png',
+    imageCopyRight: 'Firdous Nizar',
     designCategory: [
       'Architecture',
       'Hybrid',
@@ -168,6 +174,7 @@ final List<Project> projects = [
     slide2Image: 'assets/projectAssets/Vendor_Van/hover_VendorVan.png',
     slide3Image: 'assets/projectAssets/Vendor_Van/slide3.png',
     slide4Image: 'assets/projectAssets/Vendor_Van/slide4.png',
+    imageCopyRight: 'Firdous Nizar',
     designCategory: [
       'Product Design',
       'Retail',
@@ -214,6 +221,7 @@ class Project {
   final String slide2Image;
   final String slide3Image;
   final String slide4Image;
+  final String imageCopyRight;
   final List<String> designCategory;
   final int year;
   final String place;
@@ -235,6 +243,7 @@ class Project {
     @required this.slide2Image,
     @required this.slide3Image,
     @required this.slide4Image,
+    @required this.imageCopyRight,
     @required this.designCategory,
     @required this.year,
     @required this.place,

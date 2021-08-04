@@ -16,7 +16,7 @@ class ProjectDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double detailFontSize = 16;
+    final double detailFontSize = 22;
     return Container(
       height: widgetHeight,
       width: widgetWidth,
