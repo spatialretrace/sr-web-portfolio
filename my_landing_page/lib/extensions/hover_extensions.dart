@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/extensions/navigator_hover.dart';
 import 'package:my_landing_page/extensions/review_hover.dart';
+import 'package:my_landing_page/extensions/text_color_hover.dart';
 import 'dart:html' as html;
 import 'package:my_landing_page/extensions/tile_project_hover.dart';
 
@@ -30,6 +31,12 @@ extension HoverExtensions on Widget {
 
   Widget get navigatorOnHover {
     return NavigatorHover(
+      child: this,
+    );
+  }
+
+  Widget get textColorOnHover {
+    return TextColorHover(
       child: this,
     );
   }

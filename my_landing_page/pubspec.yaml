@@ -83,6 +83,27 @@ flutter:
           weight: 700
         - asset: assets/FuturaCondensedRegular.ttf
           weight: 400
+    - family: Arimo
+      fonts:
+        - asset: assets/Arimo-Regular.ttf
+        - asset: assets/Arimo-Italic.ttf
+          style: italic
+        - asset: assets/Arimo-Bold.ttf
+          weight: 900
+        - asset: assets/Arimo-BoldItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/Arimo-SemiBold.ttf
+          weight: 600
+        - asset: assets/Arimo-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/Arimo-Medium.ttf
+          weight: 400
+        - asset: assets/Arimo-MediumItalic.ttf
+          weight: 400
+          style: italic
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
