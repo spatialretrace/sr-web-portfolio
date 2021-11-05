@@ -79,7 +79,7 @@ class MarilouLaundry extends StatelessWidget {
             WebBG(
               homeBGback: homeBGback,
               homeBGfront: homeBGfront,
-              pageHeight: width * 1.25,
+              pageHeight: 2250,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -100,7 +100,7 @@ class MarilouLaundry extends StatelessWidget {
                 //PROJECT BLOG SECTION
                 ProjectBlog(
                   currentProject: currentProject,
-                  blogHeight: 520,
+                  blogHeight: 920,
                   blogWidth: 1080,
                 ),
               ],
