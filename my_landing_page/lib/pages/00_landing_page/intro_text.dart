@@ -16,6 +16,7 @@ class IntroText extends StatefulWidget {
     @required this.fontSize2,
     @required this.fontWeight,
     @required this.letterSpace,
+    @required this.introTextAlign,
   }) : super(key: key);
 
   final Color textColor1, textColor2;
@@ -24,6 +25,7 @@ class IntroText extends StatefulWidget {
   final FontWeight fontWeight;
   final double letterSpace;
   final String fontFam;
+  final TextAlign introTextAlign;
 
   @override
   State<IntroText> createState() => _IntroTextState();
@@ -58,7 +60,7 @@ class _IntroTextState extends State<IntroText> {
               fontWeight: widget.fontWeight,
               height: 1.5,
             ),
-            ),
+          ),
           TextSpan(
             text: '\nand welcome to',
             style: TextStyle(
@@ -93,8 +95,8 @@ class _IntroTextState extends State<IntroText> {
             ),
           ),
         ]),
+        textAlign: widget.introTextAlign,
       ),
     );
   }
 }
-

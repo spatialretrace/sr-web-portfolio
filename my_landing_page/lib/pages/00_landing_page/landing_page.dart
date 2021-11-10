@@ -4,8 +4,24 @@ import 'package:my_landing_page/pages/00_landing_page/hi_intro.dart';
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      if (constraints.maxWidth > 600) {
+        return WideLayout();
+      } else {
+        return NarrowLayout();
+      }
+    });
+  }
+}
+
+class WideLayout extends StatelessWidget {
+  const WideLayout({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
+
     return Material(
       child: Stack(
         children: [
@@ -30,9 +46,11 @@ class LandingPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
-                width: 0.45 * width,
+                width: 700,
                 height: height,
-                child: HiIntro(),
+                child: HiIntro(
+                  introTextAlign: TextAlign.left,
+                ),
               ),
               Container(
                 width: 0.45 * width,
@@ -49,6 +67,54 @@ class LandingPage extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class NarrowLayout extends StatelessWidget {
+  const NarrowLayout({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
+
+    return Material(
+      child: Stack(
+        children: [
+          Container(
+            width: width,
+            height: height,
+            color: Colors.amber,
+          ),
+          Container(
+            width: 600,
+            height: height,
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: 300,
+              height: 300,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  alignment: Alignment.bottomCenter,
+                  image: AssetImage("assets/Firdous_Avatar.png"),
+                  fit: BoxFit.contain,
+                  // scale: 0.5,
+                ),
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.topCenter,
+            width: 600,
+            padding: EdgeInsets.only(left: 100),
+            height: height,
+            child: HiIntro(
+              introTextAlign: TextAlign.center,
+            ),
           ),
         ],
       ),

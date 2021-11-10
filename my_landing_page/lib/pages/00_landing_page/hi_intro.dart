@@ -8,7 +8,10 @@ import 'package:url_launcher/url_launcher.dart';
 class HiIntro extends StatelessWidget {
   const HiIntro({
     Key key,
+    @required this.introTextAlign,
   }) : super(key: key);
+
+  final TextAlign introTextAlign;
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +39,17 @@ class HiIntro extends StatelessWidget {
             width: width,
             height: 0.5 * height,
             child: IntroText(
-                fontFam: 'Futura',
-                textColor1: Colors.black,
-                textColor2: Colors.white,
-                lineSpacing1: 14,
-                lineSpacing2: 10,
-                fontSize1: width < 1280 ? 30 : width * 0.02,
-                fontSize2: 64,
-                fontWeight: FontWeight.w600,
-                letterSpace: 2),
+              fontFam: 'Futura',
+              textColor1: Colors.black,
+              textColor2: Colors.white,
+              lineSpacing1: 14,
+              lineSpacing2: 10,
+              fontSize1: width < 1280 ? 30 : width * 0.02,
+              fontSize2: 64,
+              fontWeight: FontWeight.w600,
+              letterSpace: 2,
+              introTextAlign: introTextAlign,
+            ),
           ),
           Container(
             width: width,
