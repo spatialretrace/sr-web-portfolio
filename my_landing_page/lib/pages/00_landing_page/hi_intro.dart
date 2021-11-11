@@ -1,11 +1,15 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/pages/00_landing_page/intro_text.dart';
+import 'package:my_landing_page/widgets/rotate_widget.dart';
 import 'package:my_landing_page/widgets/social_media.dart';
 import 'package:my_landing_page/widgets/web_nav.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HiIntro extends StatelessWidget {
+import 'landing_page.dart';
+
+class HiIntro extends StatefulWidget {
   const HiIntro({
     Key key,
     @required this.introTextAlign,
@@ -14,10 +18,16 @@ class HiIntro extends StatelessWidget {
   final TextAlign introTextAlign;
 
   @override
+  State<HiIntro> createState() => _HiIntroState();
+}
+
+class _HiIntroState extends State<HiIntro> {
+  @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     double photoRightsFontSize = 18;
+    bool isVisible = false;
     return Container(
       child: Column(
         children: [
@@ -38,17 +48,51 @@ class HiIntro extends StatelessWidget {
           Container(
             width: width,
             height: 0.5 * height,
-            child: IntroText(
-              fontFam: 'Futura',
-              textColor1: Colors.black,
-              textColor2: Colors.white,
-              lineSpacing1: 14,
-              lineSpacing2: 10,
-              fontSize1: width < 1280 ? 30 : width * 0.02,
-              fontSize2: 64,
-              fontWeight: FontWeight.w600,
-              letterSpace: 2,
-              introTextAlign: introTextAlign,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                IntroText(
+                  fontFam: 'Futura',
+                  textColor1: Colors.black,
+                  textColor2: Colors.white,
+                  lineSpacing1: 14,
+                  lineSpacing2: 10,
+                  fontSize1: width < 1280 ? 30 : width * 0.02,
+                  fontSize2: 64,
+                  fontWeight: FontWeight.w600,
+                  letterSpace: 2,
+                  introTextAlign: widget.introTextAlign,
+                ),
+                Container(
+                  width: 50,
+                  height: 200,
+                  alignment: Alignment.bottomRight,
+                  child: RotateWidget(
+                    child: MouseRegion(
+                      onEnter: (e) {
+                        debugPrint("SHOWING SPATIAL RETRACE MOTTO!!!");
+                        setState(() {
+                          isVisible = true;
+                          changeShowDef(isVisible);
+                        });
+                      },
+                      onExit: (e) {
+                        debugPrint("HIDING SPATIAL RETRACE MOTTO!!!");
+                        setState(() {
+                          isVisible = false;
+                          changeShowDef(isVisible);
+                        });
+                      },
+                      child: FaIcon(
+                        FontAwesomeIcons.certificate,
+                        color: Colors.white,
+                        size: 40,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
           Container(
