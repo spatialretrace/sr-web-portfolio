@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/pages/00_landing_page/hi_intro.dart';
-
-bool showDef = false;
-
-void changeShowDef(bool val) {
-  showDef = val;
-  debugPrint("CHANGING VALUE OF SHOWDEF FLAG TO $showDef!");
-}
+import 'package:my_landing_page/pages/00_landing_page/spatial_retrace_definition.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -33,19 +27,6 @@ class _WideLayoutState extends State<WideLayout> {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
-    bool isVisible = false;
-    if (showDef) {
-      //TODO: SOLVE THIS LOGIC PLEAAASE!!!
-      setState(() {
-        isVisible = true;
-        debugPrint("isVisible IS NOW $isVisible");
-      });
-    } else {
-      setState(() {
-        isVisible = false;
-        debugPrint("isVisible IS NOW $isVisible");
-      });
-    }
 
     return Material(
       child: Stack(
@@ -93,16 +74,7 @@ class _WideLayoutState extends State<WideLayout> {
                       },
                     ),
                   ),
-                  Visibility(
-                    visible: isVisible,
-                    child: Text(
-                      "THIS IS THE DEFINITION OF SPATIAL RETRACE!",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 50,
-                      ),
-                    ),
-                  ),
+                  SpatialRetraceDefinition(),
                 ],
               ),
             ],

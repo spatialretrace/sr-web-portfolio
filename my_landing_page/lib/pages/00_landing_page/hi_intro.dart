@@ -1,13 +1,12 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/pages/00_landing_page/intro_text.dart';
+import 'package:my_landing_page/pages/00_landing_page/spatial_retrace_definition.dart';
 import 'package:my_landing_page/widgets/rotate_widget.dart';
 import 'package:my_landing_page/widgets/social_media.dart';
 import 'package:my_landing_page/widgets/web_nav.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'landing_page.dart';
 
 class HiIntro extends StatefulWidget {
   const HiIntro({
@@ -27,7 +26,6 @@ class _HiIntroState extends State<HiIntro> {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     double photoRightsFontSize = 18;
-    bool isVisible = false;
     return Container(
       child: Column(
         children: [
@@ -72,17 +70,11 @@ class _HiIntroState extends State<HiIntro> {
                     child: MouseRegion(
                       onEnter: (e) {
                         debugPrint("SHOWING SPATIAL RETRACE MOTTO!!!");
-                        setState(() {
-                          isVisible = true;
-                          changeShowDef(isVisible);
-                        });
+                        changeShowDef(true);
                       },
                       onExit: (e) {
                         debugPrint("HIDING SPATIAL RETRACE MOTTO!!!");
-                        setState(() {
-                          isVisible = false;
-                          changeShowDef(isVisible);
-                        });
+                        changeShowDef(false);
                       },
                       child: FaIcon(
                         FontAwesomeIcons.certificate,

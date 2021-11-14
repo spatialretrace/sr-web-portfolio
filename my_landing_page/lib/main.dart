@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/pages/00_a_test_page/test_page.dart';
 import 'package:my_landing_page/pages/02_blog_page/blog_page.dart';
 import 'package:my_landing_page/pages/03_about_page/about_page.dart';
 import 'package:my_landing_page/pages/01_work_page/work_page.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         '/about': (context) => AboutPage(),
         '/blog': (context) => BlogPage(),
         '/contact': (context) => ContactPage(),
+        '/test': (context) => TestPage(),
       },
     );
   }
