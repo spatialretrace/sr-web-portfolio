@@ -8,6 +8,26 @@ import 'package:my_landing_page/widgets/web_BG.dart';
 import 'package:my_landing_page/widgets/web_nav.dart';
 
 class ContactPage extends StatelessWidget {
+  const ContactPage({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      if (constraints.maxWidth > 600) {
+        return WideLayout();
+      } else {
+        return NarrowLayout();
+      }
+    });
+  }
+}
+
+class WideLayout extends StatefulWidget {
+  @override
+  State<WideLayout> createState() => _WideLayoutState();
+}
+
+class _WideLayoutState extends State<WideLayout> {
   @override
   Widget build(BuildContext context) {
     final Color homeBGback = Colors.amber;
@@ -34,7 +54,9 @@ class ContactPage extends StatelessWidget {
                     // bottom: 50,
                   ),
                   height: height,
+                  alignment: Alignment.center,
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       //WEIRD CURVE AND FACE SECTION
                       CurveNFace(
@@ -64,6 +86,7 @@ class ContactPage extends StatelessWidget {
                               //CONTACT MESSAGE SECTION
                               ContactMessage(
                                 widgetHeight: 600,
+                                contactMessageFontSize: 20,
                               ),
                               //CONTACT FORM SECTION
                               // ContactForm(
@@ -94,6 +117,58 @@ class ContactPage extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            BackHomeButton(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class NarrowLayout extends StatefulWidget {
+  @override
+  State<NarrowLayout> createState() => _NarrowLayoutState();
+}
+
+class _NarrowLayoutState extends State<NarrowLayout> {
+  @override
+  Widget build(BuildContext context) {
+    final Color homeBGback = Colors.amber;
+    final Color homeBGfront = Colors.black;
+    final double width = MediaQuery.of(context).size.width;
+    final double height = 1020;
+    // MediaQuery.of(context).size.height;
+    return Material(
+      child: SingleChildScrollView(
+        child: Stack(
+          children: [
+            WebBG(
+              homeBGback: homeBGback,
+              homeBGfront: homeBGfront,
+              pageHeight: height,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.only(top: 20, left: 50, right: 50),
+                  height: height,
+                  alignment: Alignment.topCenter,
+                  width: width,
+                  child: Column(
+                    children: [
+                      //CONTACT MESSAGE SECTION
+                      ContactMessage(
+                        widgetHeight: 800,
+                        contactMessageFontSize: 16,
+                      ),
+                      //FOOTER SECTION
+                      FooterSection(),
+                    ],
+                  ),
+                ),
+              ],
             ),
             BackHomeButton(),
           ],

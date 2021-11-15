@@ -8,13 +8,14 @@ class ContactMessage extends StatelessWidget {
   const ContactMessage({
     Key key,
     @required this.widgetHeight,
+    @required this.contactMessageFontSize,
   }) : super(key: key);
 
   final double widgetHeight;
+  final double contactMessageFontSize;
   @override
   Widget build(BuildContext context) {
     final double columnWidth = 60;
-    double contactMessageFontSize = 20;
     // final double width = MediaQuery.of(context).size.width;
     return Container(
       height: widgetHeight,
@@ -65,7 +66,7 @@ class ContactMessage extends StatelessWidget {
                     '\n\n\nLet\'s Design Together!',
                     style: TextStyle(
                       color: Colors.amber,
-                      fontSize: 36,
+                      fontSize: contactMessageFontSize + 20,
                       fontFamily: 'Futura',
                     ),
                     textAlign: TextAlign.center,
