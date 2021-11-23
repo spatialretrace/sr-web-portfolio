@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/CAD_Temple/project_brief.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/CAD_Temple/project_detail.dart';
+import 'package:my_landing_page/widgets/no_blog_message.dart';
 import 'package:my_landing_page/widgets/project_slide_2.dart';
 import 'package:my_landing_page/widgets/project_slide_3.dart';
 import 'package:my_landing_page/widgets/project_slide_4.dart';
@@ -100,11 +101,16 @@ class CADTemple extends StatelessWidget {
                   CarouselDemo(widgetList: list),
                 ]),
                 //PROJECT BLOG SECTION
-                ProjectBlog(
-                  currentProject: currentProject,
-                  blogHeight: 520,
-                  blogWidth: 1080,
-                ),
+                currentProject.hasBlog
+                    ? ProjectBlog(
+                        currentProject: currentProject,
+                        blogHeight: 520,
+                        blogWidth: 1080,
+                      )
+                    : NoBlogMessage(
+                        currentProject: currentProject,
+                        blogWidth: 1080,
+                      ),
               ],
             ),
             //FOOTER SECTION

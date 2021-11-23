@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/widgets/no_blog_message.dart';
 import 'package:my_landing_page/widgets/project_slide_2.dart';
 import 'package:my_landing_page/widgets/project_slide_3.dart';
 import 'package:my_landing_page/widgets/project_slide_4.dart';
@@ -79,7 +80,7 @@ class MarilouLaundry extends StatelessWidget {
             WebBG(
               homeBGback: homeBGback,
               homeBGfront: homeBGfront,
-              pageHeight: 2250,
+              pageHeight: 2340,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -98,11 +99,16 @@ class MarilouLaundry extends StatelessWidget {
                   CarouselDemo(widgetList: list),
                 ]),
                 //PROJECT BLOG SECTION
-                ProjectBlog(
-                  currentProject: currentProject,
-                  blogHeight: 920,
-                  blogWidth: 1080,
-                ),
+                currentProject.hasBlog
+                    ? ProjectBlog(
+                        currentProject: currentProject,
+                        blogHeight: 1278,
+                        blogWidth: 1080,
+                      )
+                    : NoBlogMessage(
+                        currentProject: currentProject,
+                        blogWidth: 1080,
+                      ),
               ],
             ),
             //FOOTER SECTION

@@ -19,7 +19,6 @@ class ProjectBlog extends StatelessWidget {
       height: blogHeight,
       width: blogWidth,
       margin: EdgeInsets.symmetric(horizontal: 100),
-      // width: 1080,
       decoration: BoxDecoration(
         color: currentProject.color3,
       ),

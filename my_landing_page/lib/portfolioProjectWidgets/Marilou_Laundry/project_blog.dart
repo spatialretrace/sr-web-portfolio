@@ -16,6 +16,9 @@ class ProjectBlog extends StatelessWidget {
   final double blogHeight;
   @override
   Widget build(BuildContext context) {
+    double screenshotWidth = 220;
+    double screenshotHeight = 180;
+    double screenshotMargin = 15;
     return Container(
       height: blogHeight,
       width: blogWidth,
@@ -213,17 +216,109 @@ class ProjectBlog extends StatelessWidget {
                   ),
                 ),
               ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: 0.5 * blogWidth,
+                    height: 600,
+                    child: Container(
+                      margin: EdgeInsets.only(
+                          top: 30, right: 30, left: 30, bottom: 15),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage(
+                                "assets/projectAssets/Marilou/blog_marilu.png"),
+                            fit: BoxFit.fitWidth),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 30),
+                    child: Text(
+                      'Snapshot of Trello board for Marilou Does the Laundry, 2021',
+                      style: TextStyle(
+                        fontFamily: 'Futura',
+                        fontSize: 16,
+                        fontWeight: FontWeight.w100,
+                        color: currentProject.color1,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
               Container(
-                width: 0.5 * blogWidth,
-                height: 580,
-                child: Container(
-                  margin: EdgeInsets.all(30),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
-                        image: AssetImage(
-                            "assets/projectAssets/Marilou/blog_marilu.png"),
-                        fit: BoxFit.fitWidth),
+                padding: EdgeInsets.only(top: 20),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: screenshotWidth,
+                      height: screenshotHeight,
+                      margin: EdgeInsets.all(screenshotMargin),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage(
+                                "assets/projectAssets/Marilou/blog_marilu2.png"),
+                            fit: BoxFit.fitHeight),
+                      ),
+                    ),
+                    Container(
+                      width: screenshotWidth,
+                      height: screenshotHeight,
+                      margin: EdgeInsets.all(screenshotMargin),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage(
+                                "assets/projectAssets/Marilou/blog_marilu3.png"),
+                            fit: BoxFit.fitHeight),
+                      ),
+                    ),
+                    Container(
+                      width: screenshotWidth,
+                      height: screenshotHeight,
+                      margin: EdgeInsets.all(screenshotMargin),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage(
+                                "assets/projectAssets/Marilou/blog_marilu4.jpeg"),
+                            fit: BoxFit.fitHeight),
+                      ),
+                    ),
+                    Container(
+                      width: screenshotWidth,
+                      height: screenshotHeight,
+                      margin: EdgeInsets.all(screenshotMargin),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage(
+                                "assets/projectAssets/Marilou/blog_marilu5.png"),
+                            fit: BoxFit.fitHeight),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 60),
+                child: Text(
+                  'Evolution of Marilou and her sisters for Marilou Does the Laundry, 2021',
+                  style: TextStyle(
+                    fontFamily: 'Futura',
+                    fontSize: 16,
+                    fontWeight: FontWeight.w100,
+                    color: currentProject.color1,
                   ),
                 ),
               ),

@@ -17,38 +17,36 @@ class ProjectBlog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 200,
-        alignment: Alignment.center,
-        // blogHeight,
-        width: blogWidth,
-        decoration: BoxDecoration(
-          color: currentProject.color3,
-        ),
-        child: NoBlogMessage(currentProject: currentProject)
-        // Row(
-        //   children: [
-        //     Container(
-        //       width: 0.5 * blogWidth,
-        //       child: Container(
-        //         margin: EdgeInsets.all(30),
-        //         decoration: BoxDecoration(
-        //           color: Colors.white,
-        //           borderRadius: BorderRadius.circular(10),
-        //         ),
-        //       ),
-        //     ),
-        //     Container(
-        //       width: 0.5 * blogWidth,
-        //       child: Container(
-        //         margin: EdgeInsets.all(30),
-        //         decoration: BoxDecoration(
-        //           color: Colors.white,
-        //           borderRadius: BorderRadius.circular(10),
-        //         ),
-        //       ),
-        //     ),
-        //   ],
-        // ),
-        );
+      height: blogHeight,
+      alignment: Alignment.center,
+      width: blogWidth,
+      decoration: BoxDecoration(
+        color: currentProject.color3,
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 0.5 * blogWidth,
+            child: Container(
+              margin: EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+          ),
+          Container(
+            width: 0.5 * blogWidth,
+            child: Container(
+              margin: EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
