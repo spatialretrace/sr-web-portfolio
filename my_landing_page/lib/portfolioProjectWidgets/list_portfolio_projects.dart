@@ -128,7 +128,7 @@ final List<Project> projects = [
     ],
     year: 2019,
     place: 'Tokyo, JAPAN',
-    hasBlog: false,
+    hasBlog: true,
     blogName: 'Sacred physicality in AutoCAD?',
     blogReadTime: '3 min read',
     projectName: 'CAD TEMPLE',

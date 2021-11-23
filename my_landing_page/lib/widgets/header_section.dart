@@ -13,6 +13,33 @@ class HeaderSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      if (constraints.maxWidth > 600) {
+        return WideLayout(
+          currentPage: currentPage,
+        );
+      } else {
+        return NarrowLayout();
+      }
+    });
+  }
+}
+
+class WideLayout extends StatefulWidget {
+  const WideLayout({
+    Key key,
+    @required this.currentPage,
+  }) : super(key: key);
+
+  final String currentPage;
+
+  @override
+  _WideLayoutState createState() => _WideLayoutState();
+}
+
+class _WideLayoutState extends State<WideLayout> {
+  @override
+  Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     return Stack(children: [
       Container(
@@ -38,13 +65,87 @@ class HeaderSection extends StatelessWidget {
             navTextColor: Colors.white,
             navTextElevation: 3.0,
             navSpacing: 80,
-            currentPage: currentPage,
+            currentPage: widget.currentPage,
           ),
           SizedBox(
             height: 50,
           ),
         ],
       ),
+    ]);
+  }
+}
+
+class NarrowLayout extends StatefulWidget {
+  const NarrowLayout({
+    Key key,
+    @required this.currentPage,
+  }) : super(key: key);
+
+  final String currentPage;
+
+  @override
+  _NarrowLayoutState createState() => _NarrowLayoutState();
+}
+
+class _NarrowLayoutState extends State<NarrowLayout> {
+  @override
+  Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    return Stack(children: [
+      Container(
+        height: 160,
+        child: Center(
+          child: CustomPaint(
+            size: Size(width, 160),
+            painter: CurvedPainter(),
+          ),
+        ),
+      ),
+      Container(
+        width: width,
+        child: Column(
+          children: [
+            SizedBox(
+              height: 50,
+            ),
+            AvatarHomeButton(),
+            SizedBox(
+              height: 30,
+            ),
+          ],
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.only(top: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            MaterialButton(
+              onPressed: () {
+                debugPrint("GOING BACK TO THE PREVIOUS PAGE!!!");
+                Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.arrow_back_ios,
+                color: Colors.black,
+                size: 24,
+              ),
+            ),
+            MaterialButton(
+              onPressed: () {
+                debugPrint("OPENING THE NARROW LAYOUT MENU!!!");
+                // Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.menu,
+                color: Colors.black,
+                size: 30,
+              ),
+            ),
+          ],
+        ),
+      )
     ]);
   }
 }
